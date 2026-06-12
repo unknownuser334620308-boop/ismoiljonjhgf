@@ -1,0 +1,429 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="flex justify-center pt-[150px]"> 
+    <div>
+        <h2 class="text-[28px] font-[500] mb-[30px]">Savollar va javoblar</h2>
+        <h3 class="w-[259px] h-[44px] text-[16px] font-[600]">Ro’yxatdan o’tish</h3>
+        <div class="w-[239px] h-[56px]">Qanday qilib ilovada ro’yxatdan o’tish mumkin?</div>
+        <div class="w-[239px] h-[56px]">Qanday qilib saytda ro’yxatdan o’tish mumkin?</div>
+        <div class="w-[239px] h-[40px]">Uzum ID nima?</div>
+        <div class="w-[239px] h-[40px]">Menda Uzum ID bormi?</div>
+        <div class="w-[239px] h-[56px]">Uzum ID yordamida qanday kirish mumkin?</div>
+        <div class="w-[239px] h-[56px]">Uzum ID bilan kirish xavfsizmi?</div>
+        <h3 class="w-[239px] h-[44px] font-[600]">Buyurtmani rasmiylashtirish</h3>
+        <div class="w-[239px] h-[56px]">Qanday buyurtma beriladi?</div>
+        <div class="w-[239px] h-[56px]">Buyurtma va promokod zaxirasi qanday ishlaydi?</div>
+        <div class="w-[239px] h-[80px]">Rasmiylashtirilgan buyurtmaga mahsulotni qanday qoʻshish yoki olib tashlash mumkin?</div>
+        <div class="w-[239px] h-[56px]">Buyurtma qancha muddat saqlanadi?</div>
+        <div class="w-[239px] h-[56px]">Rasmiylashtirilgan buyurtmani qanday bekor qilish mumkin?</div>
+        <h3 class="w-[239px] h-[44px] font-[600]">Yetkazib berish</h3>
+        <div class="w-[239px] h-[56px]">Yetkazib berishning qanday usullari mavjud?</div>
+        <div class="w-[239px] h-[56px]">Buyurtma qachon yetkazib beriladi?</div>
+        <div class="w-[239px] h-[76px]">Belgilangan mahsulot tarqatish punktini qanday o’zgartirish mumkin?</div>
+        <div class="w-[239px] h-[76px]">Kuryer orqali yetkazib berish sanasini qanday o'zgartirish mumkin?</div>
+        <div class="w-[239px] h-[76px]">Kuryerlik yetkazib berish sanasini qanday o'zgartirish mumkin?</div>
+        <div class="w-[239px] h-[96px]">Kuryer orqali yetkazib berish uchun ko'rsatilgan telefon raqamini qanday o'zgartirish mumkin?</div>
+        <h3 class="w-[239px] h-[44px] font-[600]">To’lov</h3>
+        <div class="w-[239px] h-[40px]">Onlayn-to’lov</div>
+        <div class="w-[239px] h-[40px]">Uzum Nasiya muddatli to’lovi</div>
+        <div class="w-[239px] h-[56px]">Mahsulotni qabul qilganda to’lov uslubi</div>
+        <h3 class="w-[239px] h-[44px] font-[600]">Uzum Nasiya muddatli to’lovi</h3>
+        <div class="w-[239px] h-[40px]">Muddatli to’lov haqida</div> 
+        <div class="w-[239px] h-[56px]">Muddatli to'lovga xaridlar uchun qancha miqdor ajratiladi?</div>
+        <div class="w-[239px] h-[40px]">Muddatli to'lov shartlari:</div>
+        <div class="w-[239px] h-[56px]">Muddatli to’lovni qanday rasmiylashtirish kerak?</div>
+        <h3 class="w-[239px] h-[44px] font-[600]">Buyurtmani qabul qilish</h3>
+        <div class="w-[239px] h-[56px]">Buyurtmani qabul qilish</div>
+        <div class="w-[239px] h-[56px]">Buyurtmani qanday qabul qila olaman?</div>
+        <h3 class="w-[239px] h-[44px] font-[600]">Mahsulotlar</h3>
+        <div class="w-[239px] h-[40px]">Mahsulot bo’yicha maslahat</div>
+        <div class="w-[239px] h-[56px]">Bir qo’lga sotuvi cheklangan mahsulotlar</div>
+        <h3 class="w-[239px] h-[44px] font-[600]">Mahsulot va pulni qaytarish</h3>
+        <div class="w-[239px] h-[56px]">Sifatiga e’tiroz bo’lmagan mahsulotni qaytarish</div>
+        <div class="w-[239px] h-[56px]">Sifatiga e’tiroz bo’lmagan mahsulotni qaytarish</div>
+        <div class="w-[239px] h-[56px]">Oldindan qilingan to‘lovni qaytarish</div>
+        <div class="w-[239px] h-[56px]">Muddatli to’lov limitining qaytarilishi</div>
+        <div class="w-[239px] h-[56px]">Qabul qilganda qilingan to‘lovni qaytarish</div>
+        <h3 class="w-[239px] h-[44px] font-[600]">Sharhlar</h3>
+        <div class="w-[239px] h-[56px]">Qanday qilib sharh qoldirish mumkin?</div>
+        <div class="w-[239px] h-[40px]">Sharhingiz nashr etilmadimi?</div>
+        <h3 class="w-[239px] h-[44px] font-[600]">Internet firibgarlar</h3>
+        <div class="w-[239px] h-[40px]">Internetda qanday aldaydilar?</div>
+        <div class="w-[239px] h-[76px]">Qanday qilib firibgarlar qurboniga aylanib qolmaslik kerak?</div>
+        <div class="w-[239px] h-[56px]">Agar aldangan bo‘lsam nima qilish kerak?</div>
+        <div class="w-[239px] h-[56px]">Firibgarlikning qanday turlari mavjud?</div>
+        <div class="w-[239px] h-[76px]">Uzum Market rasmiy ijtimoiy tarmoqlarini qanday topish mumkin?</div>
+        <h3 class="w-[239px] h-[44px] font-[600]">«Arzon narxlar kafolati» aksiyasi</h3>
+        <div class="w-[239px] h-[56px]">Arzon narxlar kafolati bu nima?</div>
+        <div class="w-[239px] h-[56px]">Aksiyada qanday ishtirok etish mumkin?</div>
+        <div class="w-[239px] h-[76px]">Aksiyada qanday mahsulotlar ishtirok etadi va ular qanday shartlarga mos kelishi kerak?</div>
+        <div class="w-[239px] h-[56px]">Aksiyada ishtirok etuvchi internet-do‘konlar ro‘yxati</div>
+        <div class="w-[239px] h-[40px]">Narx farqi qanday qaytariladi?</div>
+        <div class="w-[239px] h-[56px]">Buyurtma berishdan oldin promokod olish mumkinmi?</div>
+        <div class="w-[239px] h-[56px]">Promokod olish uchun so‘rov qancha vaqt ko‘rib chiqiladi?</div>
+        <div class="w-[239px] h-[96px]">Promokodni ishlatishga ulgurmagan bo‘lsam va amal qilish muddati tugagan bo‘lsa, nima bo‘ladi?</div>
+        <div class="w-[239px] h-[56px]">Aksiyada bir necha marta ishtirok etish mumkinmi?</div>
+        <div class="w-[239px] h-[136px]">Boshqa internet-do‘kondagi narx vaqtinchalik aksiya/chegirma tufayli past bo‘lsa, kompensatsiya/promokod olish mumkinmi? </div>
+        <div class="w-[239px] h-[136px]">Agar Uzum kartasi bilan oldindan to‘lov qilishda chegirma tufayli savatdagi mahsulot narxi pasaygan bo‘lsa, taqqoslashda qaysi narxni hisobga olish kerak?</div>
+        <div class="w-[239px] h-[96px]">@Uzum_support_bot mijozlarni qo‘llab-quvvatlash botiga qanday yozish mumkin?</div>
+        <h3 class="w-[239px] h-[44px] font-[600]">Sotuvchi yetkazib berishi</h3>
+        <div class="w-[239px] h-[56px]">Sotuvchi yetkazib berishi nima degani?</div>
+        <div class="w-[239px] h-[76px]">Sotuvchi yetkazib berishi bilan bo‘lgan tovarni qanday buyurtma qilish mumkin?</div>
+        <div class="w-[239px] h-[76px]">Sotuvchi mening hududimga yetkazib berishini qanday bilish mumkin?</div>
+        <div class="w-[239px] h-[76px]">Sotuvchi yetkazib berishi bilan bo‘lgan buyurtmaga qanday to‘lov qilinadi?</div>
+        <div class="w-[239px] h-[56px]">Sotuvchi buyurtmani qanday yetkazib beradi?</div>
+        <div class="w-[239px] h-[76px]">Sotuvchi yetkazib berishi bilan bo‘lgan buyurtmani qanday bekor qilish mumkin?</div>
+        <div class="w-[239px] h-[56px]">Sotuvchi bilan qanday bog‘lanish mumkin?</div>
+        <div class="w-[239px] h-[76px]">Sotuvchi yetkazib berishi bilan bo‘lgan tovar qanday qaytariladi?</div>
+        <h3 class="w-[239px] h-[44px] font-[600]">Sotuvchiga naqd pulga</h3>
+        <div class="w-[239px] h-[56px]">Sotuvchiga naqd pulda to‘lanadigan tovarlar bu nima?</div>
+        <div class="w-[239px] h-[56px]">Promokod bilan to‘lash mumkinmi?</div>
+        <div class="w-[239px] h-[76px]">To‘lov qilingandan keyin tovarni qanday qaytarish mumkin?</div>
+        <div class="w-[239px] h-[40px]">Tovar qanday yetkaziladi?</div>
+        <div class="w-[239px] h-[56px]">Tovarga kafolat va chekni qanday olish mumkin?</div>
+        <div class="w-[239px] h-[56px]">Sotuvchi bilan qanday bog‘lanish mumkin?</div>
+        <div class="w-[239px] h-[56px]">Nega tovar Savatga qo‘shilmayapti?</div>
+        <h3 class="w-[239px] h-[44px] font-[600]">Savollaringiz bormi?</h3>
+        <div class="w-[239px] h-[40px]">Biz bilan bog’laning</div>
+    </div>
+    <div class="w-[1050px] h-[13910px] border border-[#d7d7d9] pl-[30px] pt-[30px] mt-[80px] ml-[20px]">
+        <h3 class="text-[24px] font-[600] mb-[20px]">Ro’yxatdan o’tish</h3>
+        <p>Buyurtmani rasmiylashtirib to’lovni bajarish uchun siz ro'yxatdan o’tishingiz kerak bo'ladi. Uning yordamida ma'lumotlarni doimiy ravishda to'ldirishingiz shart bo’lmaydi. Ro'yxatdan o'tish vaqti 3 daqiqadan oshmaydi.</p>
+        <h3 class="text-[20px] font-[600] mt-[20px] mb-[10px]">Qanday qilib ilovada ro’yxatdan o’tish mumkin?</h3>
+        <p>Uzum Market ilovasini yuklab oling:</p>
+        <p>- App Storeda: https://clck.ru/367gQC;</p>
+        <p>- Play Marketda: https://clck.ru/367gTR.</p>
+        <p class="mt-[20px] mb-[20px]">Ilovaga kirib «Kirish» tugmasini bosing va telefon raqamingizni kiriting, «Kodni qabul qilish» tugmasini bosing. Sizga 4 xonali tasdiqlash kodi keladi, kodni kiritasiz va o’z shaxsiy kabinetingizga kirasiz.</p>
+        <p>So’ng, ekranni yuqori o’ng qismidagi sozlama tugmasini ⚙️ bosasiz va ushbu ma’lumotlarni kiritasiz:</p>
+        <p>- Familiya, ism, sharif;</p>
+        <p>- Telefon raqami;</p>
+        <p>- Elektron pochta manzili(agar istasangiz);</p>
+        <p>- Tug’ilgan sana;</p>
+        <p>- Jinsingizni kiritib «Saqlash» tugmasini bosasiz.</p>
+        <p class="mt-[20px] mb-[20px]">Shaxsiy kabinetdan chiqib ketish uchun, kabinet past qismida joylashgan «Chiqish» tugmasini bosasiz.</p>
+        <h3 class="text-[20px] font-[600]">Qanday qilib saytda ro’yxatdan o’tish mumkin?</h3>
+        <p class="mt-[20px] mb-[20px]">Bizning uzum.uz sahifamizga kirib «Kirish» tugmasini bosing, bu ekranning o’ng taraf yuqori qismda bo’ladi. Telefon raqamingizni kiriting, «Kodni qabul qilish» tugmasini bosing. Sizga 4 xonali tasdiqlash kodi keladi, kodni kiritasiz va o’z shaxsiy kabinetingizga kirasiz.</p>
+        <p>So’ng, ekranni yuqori chap qismida sozlama tugmasini ⚙️ bosasiz va ushbu ma’lumotlarni kiritasiz:</p>
+        <p>- Familiya, ism, sharif;</p>
+        <p>- Telefon raqami;</p>
+        <p>- Elektron pochta manzili(agar istasangiz);</p>
+        <p>- Tug’ilgan sana;</p>
+        <p>- Jinsingizni kiritib «Saqlash» tugmasini bosasiz.</p>
+        <p class="mt-[20px] mb-[20px]">Shaxsiy kabinetdan chiqib ketish uchun, o’ng qismda joylashgan ismingiz ustiga bosasiz va «Sozlamalar» qismiga kirib «Tizimdan chiqib ketish» tugmasini bosasiz.</p>
+        <h3 class="text-[20px] font-[600]">Uzum ID nima?</h3>
+        <p class="mt-[20px] mb-[20px]">Bu Uzum xizmatlariga kirish uchun yagona avtorizatsiya xizmatidir.</p>
+        <h3 class="text-[20px] font-[600]">Menda Uzum ID bormi?</h3>
+        <p class="mt-[20px] mb-[20px]">Agar siz Uzum Market, Uzum Bank yoki Uzum Tezkordan foydalangan bo‘lsangiz - demak, sizda Uzum ID mavjud, qo‘shimcha hech narsa rasmiylashtirish yoki yaratishning hojati yo‘q.</p>
+        <h3 class="text-[20px] font-[600]">Uzum ID yordamida qanday kirish mumkin?</h3>
+        <p class="mt-[20px] mb-[20px]">Buning uchun Uzum Market, Uzum Bank yoki Uzum Tezkor ilovalarini ishga tushirish, telefon raqamini kiritish va SMS orqali kirishni tasdiqlash kifoya.</p>
+        <h3 class="text-[20px] font-[600]">Uzum ID bilan kirish xavfsizmi?</h3>
+        <p class="mt-[20px] mb-[20px]">Ha, Uzum IDdagi ma’lumotlaringiz ishonchli himoyalangan — biz zamonaviy shifrlash usullaridan foydalanamiz va shaxsiy ma’lumotlarni himoya qilish bo‘yicha qonunchilikning barcha talablariga rioya qilamiz.</p>
+        <h3 class="text-[24px] font-[600]">Buyurtmani rasmiylashtirish</h3>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[20px]">Qanday buyurtma beriladi?</h3>
+        <p>1. Savatga mahsulotlarni qoʻshing.</p>
+        <p>2. Mahsulot soni va xususiyatlarini tekshiring: masalan, hajmi va rangi.</p>
+        <p>3. «Rasmiylashtirish» tugmasini bosing.</p>
+        <p>4. Buyurtmani rasmiylashtirish boʻlimida yetkazib berish usulini koʻrsating - mahsulot tarqatish punktiga yoki kuryer orqali.</p>
+        <p>5. Buyurtma beruvchining ma’lumotlarini kiriting va tekshiring. Nima uchun bu muhim: sizning telefoningizga buyurtma berish kodi keladi. Ma’lumotda ko’rsatilgan ism va familiya - pasportdagi bilan bir xil bo’lishi kerak. Agar siz promokod qo’llagan holda va buyurtmangiz ichida 18+ kategoriya mahsulot bo’lsa, siz ko’rsatgan ma’lumotlar pasport ma’lumoti bilan solishtiriladi.</p>
+        <p>6. Agar promokodingiz bo’lsa, uni qo’llang, faol promokodlarni bizning rasmiy sahifalarimiz va https://uzum.uz/uz da, SMS va PUSH-xabarnomalarida kuzatib boring.</p>
+        <p>7. Sizga qulay bo’lgan:</p>
+        <p>- Onlayn to’lov;</p>
+        <p>- Uzum Nasiya muddatli to’lov;</p>
+        <p>- Qabul qilish vaqtida Uzcard, Humo, Visa, Mastercard kartalari va naqd pul asosida to’lov turini tanlang.</p>
+        <p>8. Agar siz keyinroq to’lashga qaror qilsangiz, buyurtma yana 30 daqiqa ichida zaxirada boʻladi</p>
+        <p>9. Elektron xarid cheki.</p>
+        <p>- onlayn to'lovni amalga oshirayotganda elektron xarid cheki ilovada buyurtma raqami ostida buyurtma olingandan keyin mavjud bo'ladi;</p>
+        <p>- buyurtma muddatli to’lovga olinganda elektron xarid cheki ilovada buyurtma raqami ostida buyurtma olingandan va shartnoma faollashgandan keyin mavjud bo'ladi;</p>
+        <p>- FastPay/QR-pass orqali to'lashda elektron xarid cheki ilovada buyurtma raqami ostida buyurtma olingandan keyin mavjud bo'ladi;</p>
+        <p>- buyurtma to’lovi qabul qilingandan keyin amalga oshirilsa , ilovada elektron xarid cheki ko'rsatilmaydi, chunki qog'oz cheki joyida beriladi.</p>
+        <p class="mt-[20px] mb-[20px]">Qanday qilib tez va qulay tarzda buyurtma berishni ushbu <a href="#">havola</a> orqali o’tib ko’rishingiz mumkin.</p>
+        <h3 class="text-[20px] font-[600]">Buyurtma va promokod zaxirasi qanday ishlaydi?</h3>
+        <p class="mt-[10px] mb-[10px]">Agar siz buyurtmani rasmiylashtirib onlayn to’lov yoki muddatli to’lov turini tanlagan bo’lsangiz, ammo to’lov bajarilmagan bo’lsa, buyurtmangiz 30 daqiqaga ichida bekor qilinadi. Bu vaqtda tanlangan mahsulotlar va kiritilgan promokod boshqa qo’llanish uchun mavjud boʻlmaydi.</p>
+        <p>«Mening buyurtmalarim» boʻlimida siz to’lovni yakunlashingiz yoki buyurtmani bekor qilishingiz mumkin. Buyurtmani bekor qilganingizda, savatga solingan mahsulotlar va promokod qayta tiklanadi.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Rasmiylashtirilgan buyurtmaga mahsulotni qanday qoʻshish yoki olib tashlash mumkin?</h3>
+        <p>Biz buyurtmalarni juda tez yig’amiz va jo’natamiz — buyurtmani rasmiylashtirish va yig’ish o’rtasida bir necha daqiqa vaqt bo’ladi. Shuning uchun biz berilgan va to’langan buyurtmadan texnik jihatdan mahsulotni qo’sha yoki olib tashlay olmaymiz.</p>
+        <p class="mt-[10px] mb-[10px]">Agar siz buyurtmaga qo’shimcha mahsulotlarni qo’shishni istasangiz, ularni alohida qilib buyurtma bering va birinchi berilgan buyurtma bilan olib keting. Agar siz ayrim mahsulotlarni bekor qilmoqchi bo’lsangiz, buyurtma olib ketish vaqtida ulardan voz kechishingiz mumkin.</p>
+        <h3 class="text-[20px] font-[600]">Buyurtma qancha muddat saqlanadi?</h3>
+        <p class="mt-[10px] mb-[10px]">Buyurtma Uzum Market tarqatish punktiga kelib tushgan kundan boshlab 8 kun saqlanadi. Agar buyurtmani olib ketishga ulgurmayotgan bo’lsangiz, biz bilan Telegramda @Uzum_Support_Bot orqali murojaat qiling. Saqlash muddatini uzaytirib berishimiz mumkun*.</p>
+        <p>*O‘zbekiston pochtasi bo‘limlaridagi tarqatish punktlarida buyurtma 8 kundan ortiq saqlanmaydi. Ushbu muddatni uzaytirish imkoniyati yo’q. </p>
+        <h3 class="text-[20px] font-[600] mt-[20px] mb-[20px]">Rasmiylashtirilgan buyurtmani qanday bekor qilish mumkin?</h3>
+        <p>Biz buyurtmalar juda tez yig'amiz va jo'natamiz, shuning uchun siz tizimda buyurtma berilgan paytdan boshlab uni faqat 5 daqiqa ichida bekor qilishingiz mumkin. 5 daqiqadan so'ng, biz buyurtma berish joyiga yoki belgilangan shaharga yetib kelganidan keyingina bekor qilib bera olamiz.</p>
+        <p class="mt-[20px] mb-[20px]">Buyurtmani bekor qilish imkoniyatini aniqlash uchun biz bilan Telegramda @Uzum_Support_Bot orqali murojaat qiling.</p>
+        <h3 class="text-[24px] font-[600]">Yetkazib berish</h3>
+        <h3 class="text-[20px] font-[600] mt-[20px] mb-[10px]">Yetkazib berishning qanday usullari mavjud?</h3>
+        <p><strong class="text-[]">Buyurtma tarqatish punktigacha yetkazib berish:</strong> Uzum Market buyurtma tarqatish punktiga yetkazib berish narxi buyurtma rasmiylashtirish paytida ko'rsatiladi. Shuningdek buyurtmani rasmiylashtirish jarayonida aks ettirilgan kerakli miqdorga buyurtma bersangiz, yetkazib berish bepul bo'ladi.</p>
+        <p class="mt-[10px] mb-[10px]"><strong class="text-[]">Kuryer orqali yetkazib berish:</strong> kuryer orqali yetkazib berish narxi 30 000 so'm. Ammo, savatda ko‘rsatilgan summaga buyurtma bersangiz, bizning buyurtma tarqatish punkti mavjud bo'lgan shaharning istalgan burchagiga yetkazib berish bepul.</p>
+        <h3 class="text-[20px] font-[600] mb-[15px]">Buyurtma qachon yetkazib beriladi?</h3>
+        <strong>Mahsulot tarqatish punktlari -</strong>
+        <p>buyurtmani yetkazib berish sanasi to'lov bosqichida va buyurtmaning profilida ko'rsatiladi.* *Katta hajmdagi mahsulotlar faqat Uzum Marketning o'z tarqatish punktlariga yoki kuryer orqali uyga yetkazib berilishi mumkin. Pochta va supermarketlardagi hamkor tarqatish punktlariga bunday mahsulotlar yetkazib berilmaydi.</p>
+        <p class="mt-[20px] mb-[20px]"><strong>Kuryerlar</strong> buyurtmalarni 10:00 dan 22:00 ga qadar tarqatishadi. Buyurtma rasmiylashtirish vaqtida mavjud bo’lgan yetkazib berish oraliq vaqti ko’rsatiladi.</p>
+        <p>Agar kuryer yetkazib berishni amalga oshirayotganda, siz o'zingizning shahringiz tashqarisidagi manzilni ko'rsatgan bo’lsangiz, biz shahar ichidagi yangi manzilni aniqlashtirish uchun siz bilan bog'lanamiz.*</p>
+        <h3 class="text-[20px] font-[600] mt-[15px] mb-[10px]">Belgilangan mahsulot tarqatish punktini qanday o’zgartirish mumkin?</h3>
+        <p>Biz buyurtmalarni juda tez yigʻamiz va joʻnatamiz, shuning uchun buyurtma berilgan vaqtdan boshlab 5 daqiqa ichida yetkazib berish punktining manzilini oʻzgartirish mumkin. Buning uchun biz bilan Telegramda <a href="#">@Uzum_Support_Bot</a> orqali murojaat qiling. Darhol buyurtma raqami va buyurtmani olish uchun qulay bo’lgan yetkazib berish punktining manzilini ayting — biz uni u yerga yoʻnaltiramiz.</p>
+        <p class="mt-[15px] mb-[20px]">Agar 5 daqiqa ichida ulgurmagan bo’lsangiz, kerakli yetkazib berish punktiga yangi buyurtma qiling va eskisini Telegramda <a href="#">@Uzum_Support_Bot</a> orqali bekor qiling.</p>
+        <h3 class="text-[20px] font-[600]">Kuryer orqali yetkazib berish sanasini qanday o'zgartirish mumkin?</h3>
+        <p class="mt-[15px] mb-[20px]">Yetkazib berish kuni ertalab soat 9:00 gacha biz bilan bog'laning va biz kuryer buyurtmani olib keladigan manzilni o'zgartirish imkoniyatini ko’rib chiqamiz. Agar siz ertalab soat 9:00 dan keyin murojaat qilsangiz, yangi manzilga yetkazib berish ertasi kuni amalga oshiriladi. Ikkala holatda ham biz bilan Telegramda <a href="#">@Uzum_Support_Bot</a> orqali bog’laning.</p>
+        <h3 class="text-[20px] font-[600]">Kuryerlik yetkazib berish sanasini qanday o'zgartirish mumkin?</h3>
+        <p class="mt-[15px] mb-[20px]">Biz uni bir necha kun keyinga ko'chirishimiz mumkin. Buning uchun biz bilan Telegramda <a href="#">@Uzum_Support_Bot</a> orqali bog’laning.</p>
+        <h3 class="text-[20px] font-[600]">Kuryer orqali yetkazib berish uchun ko'rsatilgan telefon raqamini qanday o'zgartirish mumkin?</h3>
+        <p class="mt-[15px] mb-[25px]">Telegramda <a href="#">@Uzum_Support_Bot</a> orqali bog'laning va kuryer yetkazib berishni muvofiqlashtirishi mumkin bo'lgan joriy raqamingizni ayting.</p>
+        <h3 class="text-[24px] font-[600]">To’lov</h3>
+        <p class="mt-[15px] mb-[20px]">Sizga qulay bo’lgan to’lov uslubini tanlashingiz mumkin:</p>
+        <p>- Uzcard, Humo kartalaridan buyurtma uchun onlayn to’lov bajaring;</p>
+        <p>- Uzum Nasiya muddatli to’lovi orqali buyurtma rasmiylashtiring;</p>
+        <p >- qabul qilish vaqtida Uzcard, Humo, Visa, Mastercard kartalari va naqd pul asosida to’lovni amalga oshiring.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Onlayn-to’lov</h3>
+        <p>Siz buyurtma uchun to’lovni Uzcard, Humo kartalari orqali bajarishingiz mumkin.</p>
+        <p>Onlayn to’lov vaqtida siz to’lov chekini ilova shaxsiy kabinet «Mening buyurtmalarim» bo’limida «Elektron chek» tugmasini bosib olishingiz mumkin.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Uzum Nasiya muddatli to’lovi</h3>
+        <p>Siz Uzum Nasiya muddatli to'lov tizimidan foydalanishingiz va buyurtmani qismlarga bo'lib to'lashingiz mumkin: 3 oy, 6 oy va 12 oy. Buyurtmaning minimal miqdori - 35 000 so’m.</p>
+        <p>To'lov cheki buyurtma qabul qilingandan so'ng shaxsiy kabinetingizda paydo bo'ladi - «Elektron chek».</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Mahsulotni qabul qilganda to’lov uslubi</h3>
+        <p>Buyurtmani naqd pul yoki Uzcard, Humo, MasterCard va Visa orqali qabul qilish jarayonida to'lashingiz mumkin.</p>
+        <p>Elektron xarid cheki faqat quyidagi usullar orqali to'langan buyurtmalar uchun olinganidan keyin ko'rsatiladi:</p>
+        <p>- FastPay/QR-pass orqali to’langanda;</p>
+        <p>- naqd pul yoki Humo kartasi orqali to’langanda.</p>
+        <p>Uzcard, Visa, Mastercard kartalari bilan to'lashda xarid cheklari buyurtma olingandan so'ng darhol beriladi. Elektron chek ko'rsatilmaydi.</p>
+        <h3 class="text-[24px] font-[600] mt-[10px] mb-[10px]">Uzum Nasiya muddatli to’lovi</h3>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Muddatli to’lov haqida</h3>
+        <p>Uzum Nasiya muddatli to'lovining afzalliklari:</p>
+        <p>1. Dastlabki to'lovsiz.</p>
+        <p>2. Oldindan to'lab yopish imkoniyati mavjud.</p>
+        <p>3. Qulay to'lov muddatlari: 3, 6 , 12 yoki 24 oy.</p>
+        <p>4. Hamkorimiz Uzum Nasiya tomonidan barcha to'lov muddatlari uchun ishlatilishi mumkin bo'lgan xaridlar uchun miqdor ajratiladi.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Muddatli to'lovga xaridlar uchun qancha miqdor ajratiladi?</h3>
+        <p>- 800 000 so'm, agar pasport yoki ID-karta ma'lumotlarini kiritib, identifikatsiyadan o'tsangiz;</p>
+        <p>- 25 000 000 so'mgacha, agar karta raqamini kiritib, ikki yaqin insonning kontaktlarini ko'rsatsangiz.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Muddatli to'lov shartlari:</h3>
+        <p>1. Siz 20 yoshdan 55 yoshgacha bo'lishingiz kerak.</p>
+        <p>2. Uzum Marketda ro'yxatdan o'tgan telefon raqamingiz va SMS-xabarnomalar uchun karta raqamingizga ulangan telefon raqamingiz bir xil bo'lishi kerak.</p>
+        <p>3. Buyurtmaning eng kam miqdori 35 000 so 'm bo' lishi kerak.</p>
+        <p>4. 3 oylik muddatli to'lov tanlanganda, bir xarid miqdori 5 000 000 so'mdan oshmasligi kerak.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Muddatli to’lovni qanday rasmiylashtirish kerak?</h3>
+        <p>1. Uzum Market ilovasida ro'yxatdan o'ting.</p>
+        <p>2. Kerakli mahsulotlarni savatga soling va «Rasmiylashtirish» tugmasini bosing.</p>
+        <p>3. Qabul qilish usuli va shaharini tanlang:</p>
+        <p>- Buyurtmani Uzum Market tarqatish punktiga yetkazib berish bepul.</p>
+        <p>- Kuryer orqali yetkazib berish 30 000 so'm, qabul qilish paytida karta yoki naqd pul orqali alohida to‘lanadi. Ammo savatda ko‘rsatilgan summaga buyurtma bersangiz, yetkazib berish mutlaqo bepul.</p>
+        <p>4. Buyurtma oluvchini ko'rsating (buyurtmani muddatli to'lov nomiga rasmiylashgan inson olib ketishi mumkin).</p>
+        <p>5. To'lov usulida kerakli muddatga muddatli to'lovni tanlang: 3, 6 , 12 yoki 24 oy va «Anketani to'ldiring» ni bosing. Shuni ta'kidlash kerakki, 3 oylik muddatli to'lovni tanlaganingizda bir xarid miqdori 5 000 000 so'mdan oshmasligi kerak.</p>
+        <p>6. Anketada:</p>
+        <p>- Pasport yoki ID-karta ma'lumotlarini kiriting;</p>
+        <p>- Selfi olish orqali shaxsingizni tasdiqlang (kameradan foydalanish uchun ruxsat yoqilganligini tekshiring);</p>
+        <p>- Shaxsingiz tasdiqlangandan so'ng, siz 800 000 so'm miqdor olishingiz mumkin yoki olingan miqdorni «Limitni oshirish» tugmasini bosish orqali 25 000 000 so'mgacha oshirishingiz mumkin;</p>
+        <p>- Limitni oshirish uchun oxirgi 3 oyda ishlab turgan Humo yoki UzCard kartasini biriktirishingiz kerak;</p>
+        <p>- Uzum Marketda ro'yxatdan o'tgan telefon raqamingiz va SMS-xabarnomalar uchun karta raqamingizga ulangan telefon raqamingiz bir xil bo'lishi kerak;</p>
+        <p>- Karta qo'shilgandan so'ng sizga yaqin bo'lgan ikki kishining aloqa ma'lumotlarini ko'rsating;</p>
+        <p>7. Muddatli to'lov uchun miqdor olganingizdan so'ng, savatni va to'ldirilgan maydonlarni qayta tekshirishingiz kerak.</p>
+        <p>8. «Muddatli to'lov orqali to'lash» tugmasini bosing.</p>
+        <p>9. Shartnomani faollashtiring va imzolang.</p>
+        <p>10. Shartnoma faollashtirilishini va buyurtmangiz qabul qilinganligi haqidagi oyna paydo bo'lishini kuting.</p>
+        <h3 class="text-[24px] font-[600] mt-[10px]  mb-[10px]">Buyurtmani qabul qilish</h3>
+        <h3 class="text-[20px] font-[600] mt-[10px]  mb-[10px]">Buyurtma holatini qanday kuzatishim mumkin?  </h3>
+        <p class="mb-[10px]">Buyurtma holatini kuzatish mumkin. U ilovaning «Mening buyurtmalarim» bo’limi «Barchasi» qismida bo’ladi. Buyurtmalar yetkazib berishning bir necha bosqichlaridan o'tadi:</p>
+        <p>1. «To'lovni kutmoqda» - siz buyurtma berdingiz, lekin to'lovni tugatmadingiz yoki to'lovni amalga oshirmadingiz.</p>
+        <p>2. «Yig’ilmoqda» - biz mahsulotni omborda jamlayapmiz va jo'natishga tayyorlayapmiz.</p>
+        <p>3. «Yetkazilmoqda» - buyurtma yo'lda.</p>
+        <p>4. «Olib ketish mumkin» - buyurtma qabul qilish punktiga keldi.</p>
+        <p>5. «Xaridorga topshirildi»/«Qaytarildi» - mahsulotlar sizda yoki siz buyurtmadan voz kechdingiz.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Buyurtmani qanday qabul qila olaman?</h3>
+        <p>Quyidagi usullardan biri bilan:</p>
+        <p>1. Ilovada buyurtma qabul qilish kodini tarqatish punkti ma'muriga ko'rsating. Kod ilovada sizning kabinetingiz «Mening buyurtmalarim» bo'limida, so'ng «Buyurtmani qabul qilish» tugmasi ostida bo’ladi.</p>
+        <p>2. SMS-xabar orqali buyurtma raqami va SMS yoki Push-xabarda sizga yuborilgan qabul qilish kodini ayting.</p>
+        <p>Nima uchun sizdan pasport yoki boshqa hujjatni ko'rsatishingizni so'raymiz:</p>
+        <p>- siz muddatli to’lov usuli bilan buyurtmani rasmiylashtirgansiz;</p>
+        <p>- promokod ishlatilgansiz;</p>
+        <p>- boshqa odamdan buyurtmani olib ketishini so'ragansiz - bu holda sizga haqiqiy oluvchining pasporti kerak bo'ladi (muddatli to’lov bundan istisno);</p>
+        <p>- yosh chegarasi bor tovarga buyurtma berganingizda.</p>
+        <h3 class="text-[24px] font-[600] mt-[10px] mb-[10px]">Mahsulotlar</h3>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Mahsulot bo’yicha maslahat</h3>
+        <p>Siz mahsulot tavsifida mahsulotning xususiyatlari, shuningdek, uni qanday qilib to'g'ri ishlatish haqida o'qishingiz yoki sotuvchidan ma'lumotni aniqlab olishingiz mumkin.</p>
+        <p class="mt-[10px] mb-[10px]">Buning uchun Uzum Market mobil ilovasida sizni qiziqtirgan mahsulotni tanlang, pastroqqa tushing va «Sotuvchiga savol berish» yoki «Sotuvchidan so'rash» tugmasini bosing.</p>
+        <p>Agar sotuvchi sizga bir kun ichida javob bermasa, biz bilan Telegramda <a href="#">@Uzum_Support_Bot</a> orqali bog’laning. Biz, albatta, sotuvchi javobini tezlashtiramiz.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Bir qo’lga sotuvi cheklangan mahsulotlar</h3>
+        <p>Marketpleysda bir qo'lga sotuvi cheklangan mahsulotlar mavjud. Bunday tovarlarni bir qo'lga(bitta foydalanuvchiga) faqat mahsulot kartasida/fotosuratida ko'rsatilgan miqdorda sotib olish mumkin: bir kishiga 1 tovar, bir kishiga 2-3 tovar.</p>
+        <h3 class="text-[24px] font-[600] mt-[10px] mb-[10px]">Mahsulot va pulni qaytarish</h3>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Sifatiga e’tiroz bo’lmagan mahsulotni qaytarish</h3>
+        <p>Mahsulot sifatiga e’tiroz bo’lmagan mahsulotni qabul qilguncha, tarqatish punktida yoki kuryer orqali qabul qilish vaqtingizda qaytarishingiz mumkin bo’ladi.</p>
+        <p class="mt-[10px] mb-[10px]">Qolgan barcha holatlarda, mahsulot sifatiga e’tiroz bo’lmasa, mahsulotni qabul qilgan kundan boshlab 10 kun ichida tarqatish punktiga olib keling.</p>
+        <p>Tarqatish punkti ma’muri mahsulot ishlatilmagani, shtrix-kod qadog’i saqlangani va to’liqligini va tovar ko’rinishi saqlanganini tekshirib oladi.*</p>
+        <p class="mt-[10px] mb-[10px]">*Tekshirish vaqtida ishlatilish izlari yo’qligiga asoslanib mahsulotning tashqi ko’rinishi saqlanganligi aniqlanadi.E’tibor bering: sifatli oziq-ovqat mahsulotlari, hatto qadoq ochilmagan bo‘lsa ham, qaytarib olinmaydi va almashtirilmaydi.</p>
+        <strong>Qonunchilik ro'yxatiga muvofiq quyidagi sifatli tovarlar qaytarib olinmaydi:</strong>
+        <p>1. Uy sharoitlarida kasalliklarni profilaktika qilish va davolash uchun tovarlar (metall, rezina, to‘qimachilik va boshqa materiallardan tayyorlangan sanitariya va gigiyena buyumlari, tibbiy buyumlar, priborlar va apparatlar, og‘iz bo‘shlig‘i gigiyenasi vositalari, ko‘zoynak linzalari, bolalarni parvarish qilish buyumlari, dori vositalari).</p>
+        <p>2. Shaxsiy gigiyena buyumlari (tish cho‘tkalari, taroqlar, soch to‘g‘nog‘ichlar, soch bigudilari, ulama sochlar, shinonlar va boshqa shu kabi tovarlar.</p>
+        <p>3. Attorlik-pardoz tovarlari.</p>
+        <p>4. To‘qimachilik tovarlari (ip-gazlama, zig‘ir tolali, ipak, jun va sintetik gazlamalar, gazlama tusidagi noto‘qima materiallardan tayyorlangan tovarlar — lentalar, jiyaklar, to‘rlar va boshqalar); kabel mahsulotlari (simlar, shnurlar, kabellar); qurilish va pardozlash materiallari (linoleum, plyonka, gilam qoplamalar va boshqalar) hamda metrlab sotiladigan boshqa tovarlar.</p>
+        <p>5. Tikuvchilik va trikotaj buyumlari (tikuvchilik buyumlari va trikotaj ichki kiyimlar, paypoq va qo‘lqop buyumlari).</p>
+        <p>6. Polimer materiallardan tayyorlangan, oziq-ovqat materiallari bilan bog‘liq bo‘lgan, shu jumladan bir marta foydalaniladigan buyum va materiallar (oshxona va kuxnya idish-tovoqlari va anjomlari, oziq-ovqat mahsulotlarini saqlash va tashish uchun idishlar va o‘rov materiallari).</p>
+        <p>7. Maishiy kimyo tovarlari, pestitsidlar va agroximikatlar.</p>
+        <p>8. Mebel (mebel garniturlari va to‘plamlari).</p>
+        <p>9. Qimmatbaho toshlardan foydalangan holda qimmatbaho metallardan tayyorlangan, yarim qimmatbaho va sintetik toshlardan foydalangan holda qimmatbaho metallardan tayyorlangan buyumlar, silliqlangan qimmatbaho toshlar</p>
+        <p>10. Avtomobillar va motovelotovarlar, ularga tirkamalar va nomerli agregatlar; qishloq xo‘jaligi ishlari uchun kichik mexanizatsiya ko‘chma vositalari; sayr qilish qayiqlari va boshqa maishiy suzish vositalari.</p>
+        <p>11. Kafolat muddatlari belgilangan texnik jihatdan murakkab maishiy tovarlar (metall qirquvchi va yog‘ochga ishlov beruvchi maishiy dastgohlar; maishiy elektr mashinalari va maishiy elektr priborlari; maishiy radioelektron apparat; maishiy hisoblash va ko‘paytirish texnikasi; foto va kinoapparatlar; telefon apparatlari va faksimil apparati; elektr musiqa asboblari; elektron o‘yinchoqlar).</p>
+        <p class="mb-[10px]">12. Hayvonlar va oʻsimliklar.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Sifatiga eʻtiroz boʻlgan mahsulotni qaytarish</h3>
+        <strong>Texnik jihatdan murakkab mahsulotlar</strong>
+        <p>Texnik jihati murakkab bo’lgan mahsulot sifatiga e’tiroz bo’lsa, u mahsulot o’rnatilgan kafolat muddati* davomida qabul qilinadi, agar ushbu kafolat muddati bo’lmasa, 6 oy ichida qabul qilinadi.</p>
+        <p>Mahsulotni sizga qulay joylashgan mahsulot tarqatish punktiga olib keling, biz mahsulotni tekshirish uchun uni sotuvchiga yuboramiz, sotuvchi nosozlikni topgan holda uni 20 kun ichida bepul bartaraf etib beradi.**</p>
+        <p class="mb-[10px]">*Kafolat muddati mahsulot qadog’ida ko’rsatilgan bo’lishi mumkin. **Agar tovarni ishlatilish shartlari buzilmagan bo'lsa, kamchiliklar bartaraf etib beriladi.</p>
+        <strong>Boshqa har qanday mahsulot kategoriyalarini qaytarib berish</strong>
+        <p>Mahsulot sifatiga e’tiroz bo’lgan mahsulotlarni o’rnatilgan kafolat muddati* ichida qaytarish mumkin, agar ushbu kafolat muddati bo’lmasa, 6 oy ichida qabul qilinadi. Mahsulotni sizga qulay joylashgan mahsulot tarqatish punktiga olib keling, ma’mur mahsulot ishlatilmaganligini tekshirib oladi.</p>
+        <p>E'tibor bering, mahsulot diagnostika uchun qabul qilinishi va ishlab chiqarishdagi nuqson mavjudligini tasdiqlash uchun sotuvchiga topshirilishi mumkin. Sotuvchi 20 kun ichida kamchiliklarni bepul bartaraf etiladi.**</p>
+        <p class="mb-[10px]">*Kafolat muddati mahsulot qadog’ida ko’rsatilgan bo’lishi mumkin. **Agar tovarni ishlatilish shartlari buzilmagan bo'lsa, kamchiliklar bartaraf etib beriladi.</p>
+        <strong>Menga mahsulot kelmadi/ keldi, lekin boshqa mahsulot keldi/ keldi, lekin hammasi emas/ singan keldi</strong>
+        <p>Biz shunga o'xshash so'rovlarni buyurtmani olinganidan boshlab 7 kun ichida qabul qilamiz. Siz Telegramda <a href="#">@Uzum_Support_Bot</a> orqali bizga murojaat qilishingiz mumkin va bizning mutaxassislarimiz tekshirib ko’rishadi.</p>
+        <p>Muammoni tasvirlab, buyurtma raqami, mahsulotning fotosuratini va uning shtrix-kodini bizning Telegramdagi <a href="#">qo’llab-quvvatlash xizmatimizga</a> yuboring yoki mahsulotni sizga qulay bo’lgan tarqatish punktiga olib keling — biz, shuningdek, tekshirib ko’ramiz* va natijalari haqida sizga xabar beramiz.</p>
+        <p>*Qo'shimcha tekshiruvni oldini olish uchun buyurtmani qabul qilish vaqtida tekshirishni maslahat beramiz.</p>
+        <h3 class="text-[20px] font-[600]">Oldindan qilingan to‘lovni qaytarish</h3>
+        <p>Agar siz buyurtmani karta orqali onlayn to‘lagan bo‘lsangiz, pul 24 soat ichida qaytariladi. Pulning hisobga tushish muddati bankingizga bog‘liq — odatda 1 kundan 5 kungacha.</p>
+        <p>Qaytarish cheki «Mening buyurtmalarim» bo‘limida paydo bo‘ladi.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Oldindan qilingan to‘lovni qaytarish</h3>
+        <p>Buyurtma to’liq qaytarilganda limit buyurtma qaytarib berilgandan so'ng qaytariladi.</p>
+        <p class="mt-[10px] mb-[10px]">Qisman qaytarilganda limit bosqichma-bosqich, oylik to‘lovlar to‘langan sari qaytariladi, chunki limit summasi oylar bo‘yicha taqsimlangan.</p>
+        <p>Qaytarish cheki «Mening buyurtmalarim» bo‘limida paydo bo‘ladi.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Qabul qilganda qilingan to‘lovni qaytarish</h3>
+        <p>Agar siz buyurtmani qabul qilishda naqd pul bilan to‘lagan bo‘lsangiz, pul qaytarish rasmiylashtirilgan kunning o‘zida qaytariladi.</p>
+        <p class="mt-[10px] mb-[10px]">Agar to‘lov karta orqali amalga oshirilgan bo‘lsa, pul qaytarish arizasi to‘ldirilgandan so‘ng 10 kun ichida qaytariladi.</p>
+        <p>Qaytarish cheki «Mening buyurtmalarim» bo‘limida paydo bo‘ladi.</p>
+        <h3 class="text-[24px] font-[600] mt-[10px] mb-[10px]">Sharhlar</h3>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Qanday qilib sharh qoldirish mumkin?</h3>
+        <p>Mahsulotga sharh qoldirish uchun:</p>
+        <p>- shaxsiy kabinetingizni oching;</p>
+        <p>- «Mening buyurtmalarim» bo'limiga o'ting;</p>
+        <p>- kerakli buyurtmani oching;</p>
+        <p>- mahsulot nomi yonidagi «Sharh qoldirish» tugmasini bosing;</p>
+        <p>- baho bering va matningizni kiriting.</p>
+        <p class="mt-[10px] mb-[10px]">Sharh ko'rib chiqib tekshiriladi va biroz vaqt o'tgach nashr etiladi. Shuni tushunish kerakki, faqat mahsulotning xususiyatlari bilan bog'liq sharhlar nashr etiladi: hislar, sifat, foydalanish qulayligi. Agar siz mahsulot yoki buyurtma bilan bog'liq muammolarga duch kelsangiz, ular haqida bizga Telegramda <a href="#">@Uzum_Support_Bot</a> orqali yozishingiz mumkin.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Sharhingiz nashr etilmadimi?</h3>
+        <p>Mahsulotning xususiyatlari haqida ma'lumotlar mavjud sharhlar nashr etiladi. Sharh quyidagi sabablar boisi nashr etilmaydi:</p>
+        <p>- haqorat, qo'pol so'zlar yoki haqoratli so'zlarni o'z ichiga olsa;</p>
+        <p>- ilgari nashr etilgan sharhlarni takrorlaydi, takroriy matn naqshlari va formulalarini o'z ichiga olsa;</p>
+        <p>- mahsulotga tegishli bo'lmagan fotosurat yoki foydalanilayotgan intim mahsulotning fotosurati mavjud bo’lsa;</p>
+        <p>- reklama xarakteridagi materiallarni o'z ichiga olsa;</p>
+        <p class="mt-[10px] mb-[10px]">- sotib olingan mahsulotga taalluqli emas, u haqida ma'lumot yoki fikrni o'z ichiga olmaydi (ammo sharhda matnning to'liq yo'qligi uni rad etish uchun asos emas);</p>
+        <p>- tashviqotni o'z ichiga olsa.</p>
+        <h3 class="text-[24px] font-[600] mt-[10px] mb-[10px]">Internet firibgarlar</h3>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Internetda qanday aldaydilar?</h3>
+        <p>Firibgarlar bizning logotipimiz, brend nomimizdan foydalanib, tanlov, aksiya yoki o‘yinlarda ishtirok etishni taklif qiladilar. Bunday “aksiyalarning” shartlari har xil, ammo mohiyati birdir — sizdan biror narsa sotib olish yoki to‘lashni so‘raydilar.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Qanday qilib firibgarlar qurboniga aylanib qolmaslik kerak?</h3>
+        <p>Shubhali Telegram kanalini yoki ijtimoiy tarmoqlarda reklamani ko‘rdingizmi? Har qanday interaktivda ishtirok etishdan oldin bizga Telegramda <a href="#">@Uzum_Support_Bot</a> orqali yozing, so'rovlarni har kuni soat 8:00 dan 02:00 gacha qabul qilamiz.</p>
+        <p>Esda tuting, biz hech qachon kartaga pul o‘tkazish orqali to‘lovni talab qilmaymiz. Buyurtmalar uchun to'lov faqat Uzum Market ilovasida yoki topshirish punktlarida amalga oshiriladi.</p>
+        <p>- App Store <a href="#">App Store;</a></p>
+        <p>- Play Market <a href="#">Play Market.</a></p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Agar aldangan bo‘lsam nima qilish kerak?</h3>   
+        <p>Agar siz firibgarlarning qurboniga aylangan bo‘lsangiz, huquqni muhofaza qilish organlariga murojaat qiling. Barcha havolalar va skrinshotlarni saqlab qoling, agar firibgarlar saytida yoki ilovasida karta raqamini kiritgan bo‘lsangiz, kartani imkon qadar tezroq bloklash uchun bankka murojaat qiling.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Firibgarlikning qanday turlari mavjud?</h3>
+        <p>Quyida bir nechta misollar:</p>
+        <p>- Telegram’da Uzum Market brendi ostidagi soxta guruhda sovrin evaziga obunachilarni qo‘shishni so‘raydilar. So‘rovni bajargan odam birozdan so‘ng bloklanadi, u qo‘shgan do‘stlari esa yangi qurbonlarga aylanadi.</p>
+        <p>- Firibgarlar Uzum Market’dan telefon yutib olganligiz haqida soxta xabarlar jo‘natib, yetkazib berish uchun to‘lovni talab qiladi. Pulni olgandan keyin ular yo‘qolib qoladilar.</p>
+        <p class="mt-[10px] mb-[10px]">- Firibgarlar Uzum Marketga juda o‘xshash brendlar ostida soxta akkaunt va kanallar yaratib, o‘zlarini xodim sifatida ko‘rsatadilar va messenjerlar orqali ilovani yuklab olish uchun havolalar yuboradilar. Ilova o‘rnatilgandan so‘ng, ular foydalanuvchilarning shaxsiy ma’lumotlariga ega bo‘ladilar.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Uzum Market rasmiy ijtimoiy tarmoqlarini qanday topish mumkin?</h3>
+        <p>Bizning ijtimoiy tarmoqlarimiz:</p>
+        <a href="#">Instagram;</a>
+        <a href="#">Telegram;</a>
+        <a href="#">Facebook.</a>
+        <p class="mt-[10px] mb-[10px]">Barcha sovrinli aksiyalar faqat shu yerda o‘tkaziladi.</p>
+        <h3 class="text-[24px] font-[600] mt-[10px] mb-[10px]">«Arzon narxlar kafolati» aksiyasi</h3>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Arzon narxlar kafolati bu nima?</h3>
+        <p>Arzon narxlar kafolati - bu Uzum Marketdagi mahsulotni boshqa internet-do‘konlarida arzonroq narxda ko‘rsangiz, sizga promokod shaklida kompensatsiya olish imkonini beruvchi aksiya. Aksiyada ishtirok etuvchi internet-do‘konlar ro‘yxati bilan «Aksiyada ishtirok etayotgan internet-do‘konlar ro‘yxati» bo’limida tanishish mumkin.</p>
+        <p class="mt-[10px] mb-[10px]">Aksiya bo'yicha yuridik oferta: <a href="#">https://legal.uzum.uz/Low-Price-Guarantee-uz.html</a></p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Aksiyada qanday ishtirok etish mumkin?</h3>
+        <p>1. Uzum Marketdan «Arzon narx kafolati» belgisi bo’lgan mahsulotni xarid qiling.</p>
+        <p>2. Agar buyurtmani rasmiylashtirganingizdan so’ng 3 kun ichida xuddi shunday mahsulotni «Aksiyada ishtirok etayotgan internet-do‘konlar ro‘yxati» bo’limidagi internet-do’konlardan birida arzonroq narxda topsangiz, quyidagi ma’lumotlarni @Uzum_support_bot botiga yuboring:</p>
+        <p>- boshqa internet-do’kondagi mahsulot havolasi;</p>
+        <p>- Uzum Marketdagi mahsulot havolasi.</p>
+        <p class="mt-[10px] mb-[10px]">Agar mahsulot aksiyaning barcha shartlariga javob bersa (batafsil «Aksiyada qanday mahsulotlar ishtirok etadi va ular qanday shartlarga mos kelishi kerak?» bo‘limida), sizga narx farqi miqdoridagi promokodni taqdim etamiz. Ushbu promokod bilan istalgan mahsulotni chegirma bilan xarid qilishingiz mumkin.</p>
+        <p>Promokod shartlari:</p>
+        <p>- Promokod mahsulotlar orasidagi narx farqiga teng miqdorda beriladi, ammo uning miqdori 1 000 000 so‘mdan oshmasligi kerak;</p>
+        <p>- Promokod istalgan mahsulotni xarid qilishda amal qiladi;</p>
+        <p>- Promokod mahsulotni qabul qilganingizdan so‘ng 11-kuni beriladi.</p>
+        <p>- Promokod taqdim etilgan kundan boshlab bir oy davomida amal qiladi.</p>
+        <p>- Promokodni pulga almashtirish mumkin emas;</p>
+        <p>- Mahsulot sifatiga e’tirozsiz qaytarilgan taqdirda promokod berilmaydi va qayta tiklanmaydi.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Aksiyada qanday mahsulotlar ishtirok etadi va ular qanday shartlarga mos kelishi kerak?</h3>
+        <p>Aksiyada faqat Uzum Marketda «Arzon narx kafolati» belgisi bo‘lgan mahsulotlar (Uzum kartasi bo‘yicha chegirmani hisobga olmagan holda) qatnashadi. Ushbu mahsulotlarni qidiruv orqali yoki ilovaning bosh sahifasidagi maxsus to‘plamlarda topishingiz mumkin. Ushbu mahsulotlarni qidiruv orqali yoki ilovaning bosh sahifasidagi maxsus to‘plamlarda topishingiz mumkin.</p>
+        <p class="mt-[10px] mb-[10px]">Agar mahsulot turli model va ranglarda taqdim etilgan bo‘lsa, tanlagan model va rang aksiyada qatnashayotganiga ishonch hosil qiling. Buning uchun narxning ostida «Arzon narx kafolati» belgisi ko‘rinishi kerak.</p>
+        <p class="mt-[10px] mb-[10px]">Aksiyada ishtirok etish uchun mahsulot bizga murojaat qilingan paytda quyidagi shartlarga javob berishi kerak:</p>
+        <p>1. Mahsulot «Arzon narxn kafolati» belgisiga ega bo‘lishi kerak.</p>
+        <p>2. Aksiyada ishtirok etayotgan boshqa internet-do‘kondagi mahsulot narxi arzonroq bo‘lishi kerak.</p>
+        <p>3. Boshqa internet-do‘konlardagi muddatli to‘lov narxlari taqqoslashda ishtirok etmaydi.</p>
+        <p>4. Mahsulot aynan bir xil bo‘lishi kerak (brend, model, xotira hajmi, rang, o‘lcham, komplektatsiya).</p>
+        <p>5. Mahsulot boshqa internet-do‘konda mavjud bo‘lishi kerak.</p>
+        <p>6. Internet-do‘kon aksiyada ishtirok etayotgan do’konlar ro‘yxatida bo‘lishi kerak.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Aksiyada ishtirok etuvchi internet-do‘konlar ro‘yxati</h3>
+        <p>«Arzon narxlar kafolati» aksiyasida ishtirok etayotgan mahsulotlar quyidagi internet-do‘konlardagi mahsulotlar bilan taqqoslanishi mumkin: 220volt, alifshop, allgood, asiaposuda, asaxiy, babyhouse, babymarket, beautybox, bellstore, besttools, bloombeauty, boschhome, chado, chakana, charley, epamarket, express24, flymart, glotr, joybox, kansler, kidpoint, korzinkago, lochin, makeup, makeupstore, mediapark, mi_store, natural_beauty, olcha, radius, shop_tegen, texnomart, toshkentparfum, tut, yandex.uz, yarodilsya, yella, zavq, zoodmall.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Narx farqi qanday qaytariladi?</h3>
+        <p class="mt-[10px] mb-[10px]">Aksiyaning barcha shartlariga rioya qilingan taqdirda, narxdagi farq promokod shaklida qaytariladi. Promokodni olish bosqichlari:</p>
+        <p><strong>Qo‘llab-quvvatlash xizmatiga murojaat qilish.</strong> Uzum Marketdagi mahsulotni boshqa internet-do‘konda arzonroq narxda ko‘rganingizdan so‘ng, @Uzum_support_bot boti orqali murojaat yuboring. Bot sizdan kerakli ma’lumotlarni so‘raydi va sizni mutaxassisga yo‘naltiradi. Botga qanday murojaat qilish haqida «@Uzum_support_bot mijozlarni qo‘llab-quvvatlash botiga qanday yozish mumkin?» bo’limida bilib olishingiz mumkin.</p>
+        <p class="mt-[10px] mb-[10px]"><strong>So’rovni ko‘rib chiqish.</strong>So‘rovingiz 9:00 dan 21:00 gacha bo‘lgan ish vaqtida 2 soat ichida ko‘rib chiqiladi.</p>
+        <p><strong>Promokod taqdim etish.</strong> Agar so‘rovingiz tasdiqlansa, mahsulotni qabul qilib olganingizdan keyin 11-kuni promokod taqdim etiladi.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Buyurtma berishdan oldin promokod olish mumkinmi?</h3>
+        <p>Ha, agar siz hali mahsulot sotib olmagan bo‘lsangiz, lekin uni boshqa internet-do‘kondan arzonroq topgan bo‘lsangiz, <a href="#">@Uzum_support_bot</a> botiga murojaat qiling.</p>
+        <p class="mt-[10px] mb-[10px]">Biz ma’lumotlarni tekshiramiz va mahsulot aksiyaning barcha shartlariga javob bersa (batafsil «Aksiyada qanday mahsulotlar ishtirok etadi va ular qanday shartlarga mos kelishi kerak?» bo‘limida), sizga ushbu mahsulotni Uzum Marketda chegirma bilan xarid qilishingiz uchun narx farqi miqdoridagi promokodni taqdim etamiz.</p>
+        <p>Promokod shartlari:</p>
+        <p>- Promokod mahsulotlar orasidagi narx farqiga teng miqdorda beriladi, ammo uning miqdori 1 000 000 so‘mdan oshmasligi kerak;</p>
+        <p>- Promokod faqat murojaat qilingan mahsulot uchun amal qiladi;</p>
+        <p>- Promokod taqdim etilgan kundan boshlab 7 kun davomida amal qiladi;</p>
+        <p>- Promokodni pulga almashtirish mumkin emas.</p>
+        <p>- Mahsulot sifatiga e’tirozsiz qaytarilgan taqdirda promokod berilmaydi va qayta tiklanmaydi.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Promokod olish uchun so‘rov qancha vaqt ko‘rib chiqiladi?</h3>
+        <p class="mt-[10px] mb-[10px]"><a href="#">@Uzum_support_bot</a> botiga tasdiqlovchi ma’lumotlarni yuborganingizdan so‘ng, so‘rovingiz 9:00 dan 21:00 gacha bo‘lgan ish vaqtida 2 soat ichida ko‘rib chiqiladi.</p>
+        <p>Promokod faqat so‘rov tasdiqlangandan so‘ng beriladi:</p>
+        <p>- agar siz buyurtmani rasmiylashtirishdan oldin murojaat qilgan bo‘lsangiz, promokod so’rov tasdiqlangandan so‘ng darhol beriladi;</p>
+        <p>- agar siz buyurtmani rasmiylashtirgandan keyin 3 kun ichida murojaat qilgan bo’lsangiz, promokod mahsulotni qabul qilganingizdan keyin 11-kuni beriladi.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Promokodni ishlatishga ulgurmagan bo‘lsam va amal qilish muddati tugagan bo‘lsa, nima bo‘ladi?</h3>
+        <p>Afsuski, muddati o‘tgan promokod qayta tiklanmaydi. Ammo, siz yangi promokod olish uchun aksiyada ishtirok etishga yana urinib ko‘rishingiz mumkin.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Aksiyada bir necha marta ishtirok etish mumkinmi?</h3>
+        <p>Ha, mumkin. Lekin, siz qatnashish uchun qo‘shmoqchi bo‘lgan har bir yangi mahsulot, siz avval promokod olgan mahsulotdan farqli bo‘lishi shart.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Boshqa internet-do‘kondagi narx vaqtinchalik aksiya/chegirma tufayli past bo‘lsa, kompensatsiya/promokod olish mumkinmi?</h3>
+        <p>Ha, agar mahsulot aksiyaning qolgan barcha shartlariga javob bersa, kompensatsiya olishingiz mumkin. Aksiya shartlari bilan «Aksiyada qanday mahsulotlar ishtirok etadi va ular qanday shartlarga mos kelishi kerak?» bo‘limida tanishishingiz mumkin.</p>
+        <p>E’tibor bering: boshqa internet-do‘konlardagi muddatli to‘lov narxlari ushbu aksiya doirasida taqqoslashda ishtirok etmaydi.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Agar Uzum kartasi bilan oldindan to‘lov qilishda chegirma tufayli savatdagi mahsulot narxi pasaygan bo‘lsa, taqqoslashda qaysi narxni hisobga olish kerak?</h3>
+        <p>Uzum Market narxlarini boshqa internet-do‘konlar bilan taqqoslashda mahsulotning asosiy narxi hisobga olinadi. Bunda qo‘shimcha chegirmalar, jumladan Uzum kartasi bilan oldindan to‘lov qilishdagi chegirmalar inobatga olinmaydi.  </p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">@Uzum_support_bot mijozlarni qo‘llab-quvvatlash botiga qanday yozish mumkin?</h3>
+        <p>1. Telegramga kirib, <a href="#">@Uzum_support_bot</a> ni toping;</p>
+        <p>2. «Start» tugmasini bosing va botni ishga tushiring;</p>
+        <p>3. Maslahat tilini tanlang;</p>
+        <p>4. «Uzum Market bo‘yicha savol» tugmasini bosing;</p>
+        <p>5. «Arzon narxlar kafolati» tugmasini tanlang;</p>
+        <p>6. So‘ralgan ma’lumotlarni yuboring;</p>
+        <p>7. Kerakli ma’lumotlar kiritilgandan so‘ng, ish vaqti davomida — soat 9:00 dan 21:00 gacha — sizga mas’ul mutaxassis javob beradi.</p>
+        <h3 class="text-[24px] font-[600] mt-[10px] mb-[10px]">Sotuvchi yetkazib berishi</h3>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Sotuvchi yetkazib berishi nima degani?</h3>
+        <p>Bu buyurtmani sotuvchining o‘zi qadoqlaydi va sizga olib keladi degani — Uzum Market ishtirokisiz. Bunday buyurtmani topshirish punktidan olib ketib bo‘lmaydi. Yetkazib berish muddati — 30 kungacha. Agar sotuvchi sizning hududingizga yetkazib bermaydigan bo‘lsa, buyurtmani rasmiylashtirib bo‘lmaydi</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Sotuvchi yetkazib berishi bilan bo‘lgan tovarni qanday buyurtma qilish mumkin?</h3>
+        <p>Boshqa tovarlar kabi: savatga qo‘shish va buyurtmani rasmiylashtirish. Farqi faqat yetkazib berishda — sotuvchi yetkazib berishi bilan bo‘lgan tovarni topshirish punktidan olib ketib bo‘lmaydi, chunki sotuvchining o‘zi uni sizga olib keladi.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Sotuvchi mening hududimga yetkazib berishini qanday bilish mumkin?</h3>
+        <p>Bosh sahifada yoki profilda kerakli hududni tanlang — biz yetkazib berish mumkin bo‘lgan tovarlarni ko‘rsatamiz. Tovarning kartochkasida kerakli huduga yetkazib berish mavjud ekanligini ko‘rish mumkin.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Sotuvchi yetkazib berishi bilan bo‘lgan buyurtmaga qanday to‘lov qilinadi?</h3>
+        <p>Buyurtma uchun darhol to‘lash kerak — kartadan yoki muddatli to‘lovga. Agar buyurtmada bir nechta tovarlar bo‘lsa va ulardan bittasini bo‘lsa ham sotuvchi yetkazib berayotgan bo‘lsa — tovarlarning hammasi uchun darhol to‘lash kerak. Maslahat: agar butun buyurtma uchun darhol to‘lashni xohlamasangiz — sotuvchi yetkazib berishi bilan bo‘lgan tovarni boshqa tovarlardan alohida buyurtma qiling va faqat u uchun to‘lang.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Sotuvchi buyurtmani qanday yetkazib beradi?</h3>
+        <p>Buyurtmani rasmiylashtirganingizda, sotuvchi yetkazib berish sanasi va vaqtini aniqlashtirish uchun siz bilan bog‘lanadi. U telefon orqali qo‘ng‘iroq qilishi yoki messenjerda yozishi mumkin — aloqada bo‘ling. Keyin u buyurtmani qadoqlaydi va kuryeriga beradi.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Sotuvchi yetkazib berishi bilan bo‘lgan buyurtmani qanday bekor qilish mumkin?</h3>
+        <p>Buyurtmalarim bo‘limiga o‘ting → kerakligini tanlang → Buyurtmani bekor qilish bosing. Sotuvchi buyurtmani yg‘ishni boshlamasidan oldin bekor qilish mumkin.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Sotuvchi bilan qanday bog‘lanish mumkin?</h3>
+        <p>Sotuvchi buyurtma rasmiylashtirilgandan keyin tez orada o‘zi siz bilan aloqaga chiqadi. Agar u aloqaga chiqmasa — Buyurtmalarim bo‘limida ko‘rinadigan telefon raqami bo‘yicha unga qo‘ng‘iroq qiling. Agar raqam bo‘lmasa, sotuvchining o‘zi esa siz bilan aloqaga chiqmagan bo‘lsa — buyurtma bekor qilinadi, sizga pullar qaytariladi.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Sotuvchi yetkazib berishi bilan bo‘lgan tovar qanday qaytariladi?</h3>
+        <p>Sotuvchi bilan bog‘lanish va unga qaytarish qilishni xohlashingizga ma’lum qilish kerak. Buyurtmani 10 kun ichida va faqat bu sotuvchidan bo‘lgan tovarlarning hammasini bittada qaytarish mumkin. Masalan, agar sotuvchi sizga 2 ta futbolka olib kelgan bo‘lsa, siz bittasini qoldirib, boshqasini esa qaytara olmaysiz — ikkalasini qaytarish kerak. Agar tovar to‘g‘ri kelmagan yoki yoqmagan bo‘lsa, uni o‘zingiz va o‘z hisobingizdan qaytarasiz. Agar tovar nuqsonli bo‘lsa — qaytarish uchun sotuvchi to‘laydi. Tovarlarning hammasini ham qaytarish mumkin emas. Tovar qaytarib olinadigan yoki yo‘qligini uning kartochkasida ko‘rish mumkin.</p>
+        <h3 class="text-[24px] font-[600] mt-[15px] mb-[15px]">Sotuvchiga naqd pulga</h3>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Sotuvchiga naqd pulda to‘lanadigan tovarlar bu nima?</h3>
+        <p>Bularni sotuvchi o‘zi yetkazib beradi va to‘lovni ham o‘zi oladi — Uzum Market ishtirokisiz.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Promokod bilan to‘lash mumkinmi?</h3>
+        <p>Yo‘q. Bunday tovarlar Uzum Market o‘tkazadigan aksiyalarda qatnashmaydi. To‘lovni to‘liq summada bevosita sotuvchiga berish kerak.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">To‘lov qilingandan keyin tovarni qanday qaytarish mumkin?</h3>
+        <p>Sotuvchi bilan bog‘lanib, qaytarish shartlarini kelishib oling. Nega qaytarmoqchi ekanligingizni tushuntirib, uchrashuvga kelishishingiz mumkin. Uzum Market bu muzokaralarda ishtirok etmaydi.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Tovar qanday yetkaziladi?</h3>
+        <p>Buyurtma qilsangiz, sotuvchi sizga qo‘ng‘iroq qilib, uchrashuvga kelishadi. U o‘zi keladi yoki kuryer yuboradi. Yetkazib berish — sotuvchining mas’uliyati, Uzum Marketniki emas, shuning uchun bunday tovarlar Topshirish punktiga yetkazilmaydi.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Tovarga kafolat va chekni qanday olish mumkin?</h3>
+        <p>Buni to‘g‘ridan-to‘g‘ri sotuvchidan so‘rashingiz kerak. Uzum Market ilovasida xariddan keyin chek bo‘lmaydi.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Sotuvchi bilan qanday bog‘lanish mumkin?</h3>
+        <p>Uning raqamini Kabinet → Buyurtmalarim bo‘limidan topishingiz mumkin. Bu raqam buyurtma qilganingizda ham, to‘lov qilganingizda ham doim mavjud bo‘ladi.</p>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Nega tovar Savatga qo‘shilmayapti?</h3>
+        <p>Sotuvchiga naqd pulda to‘lanadigan tovarlar boshqa mahsulotlardan alohida buyurtma qilinadi. Shu sababli ular Savatga tushmaydi. Siz tovar kartochkasidan darhol buyurtma rasmiylashtirishga o‘tasiz. Lekin istasangiz, Istaklar ga saqlab qo‘yishingiz mumkin, shunda yo‘qotib qo‘ymaysiz.</p>
+        <h3 class="text-[24px] font-[600] mt-[10px] mb-[10px]">Savollaringiz bormi?</h3>
+        <h3 class="text-[20px] font-[600] mt-[10px] mb-[10px]">Biz bilan bog’laning</h3>
+        <p>Bizga Telegramda <a href="#">@Uzum_Support_Bot</a> orqali yozing, murojaatlarni har kuni soat 8:00 dan 02:00 gacha qabul qilamiz.</p>
+    </div>
+    <div class="w2 fixed bottom-5 right-5 w-[52px] h-[52px] bg-[#7000ff] rounded-full"><svg id="Capa_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 54 54" style="enable-background:new 0 0 54 54;width:54px;height:54px;" xml:space="preserve"><g><g><path style="fill:#7000ff;" d="M53,27L53,27c0,14.359-11.641,26-26,26h0C12.641,53,1,41.359,1,27v0C1,12.641,12.641,1,27,1h0 C41.359,1,53,12.641,53,27z"></path><path style="fill:#7000ff;" d="M27,54C12.112,54,0,41.888,0,27S12.112,0,27,0s27,12.112,27,27S41.888,54,27,54z M27,2 C13.215,2,2,13.215,2,27s11.215,25,25,25s25-11.215,25-25S40.785,2,27,2z"></path></g><path style="fill:#ffffff;" d="M39,32.706c-0.256,0-0.512-0.098-0.707-0.293L27,21.12L15.707,32.413 c-0.391,0.391-1.023,0.391-1.414,0s-0.391-1.023,0-1.414l11.498-11.498c0.666-0.666,1.752-0.666,2.418,0l11.498,11.498 c0.391,0.391,0.391,1.023,0,1.414C39.512,32.608,39.256,32.706,39,32.706z"></path></g></svg></div>
+    </div>
+{% endblock %}

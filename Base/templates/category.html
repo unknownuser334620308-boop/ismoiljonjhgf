@@ -1,0 +1,15 @@
+<h1>{{ category.category }}</h1>
+
+{% for i in narsalar %}
+
+<div>
+
+    <img src="{{ i.rasm.url }}" width="200">
+
+    <h2>{{ i.tavsifi }}</h2>
+
+    <p>{{ i.get_sale_price }}</p>
+
+</div>
+
+{% endfor %}

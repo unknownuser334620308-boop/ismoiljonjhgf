@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<body>
+
+
+
+    <div class="w-[100%]  flex flex-col items-center justify-center pl-[24px] pr-[24px]">
+        <div class="w-[1420px] h-[56px] flex items-center pl-[20px]">
+            <div class="w-[1420px] h-[24px] flex  pl-[20px]"  >
+                <a class="text-[16px] hover:text-[#4b4b4c] text-[#8b8e99]"  href="#">Bosh sahifa<i class="bi bi-chevron-right"></i></a>
+                <a class="text-[16px] hover:text-[#4b4b4c] text-[#8b8e99]" href="#">Barcha toifalar<i class="bi bi-chevron-right"></i></a>
+                <a class="text-[16px] hover:text-[#4b4b4c] text-[#8b8e99]" href="#">Oziq-ovqat mahsulotlari<i class="bi bi-chevron-right"></i></a>
+                <a class="text-[16px] hover:text-[#4b4b4c] text-[#8b8e99]" href="#">Un, shakar va tuz<i class="bi bi-chevron-right"></i></a>
+                <a class="text-[16px] hover:text-[#4b4b4c] text-[#8b8e99]" href="#">Un<i class="bi bi-chevron-right"></i></a>
+                <a class="text-[16px] hover:text-[#4b4b4c] text-[#8b8e99]" href="#">Un</a>
+            </div>
+        </div>
+        <div class="w-[1372px] h-[1032px] flex justify-between ">
+            <div class="w-[932px] h-[1032px]">
+                <div class="w-[630px] h-[56px]">
+                    <h1 class="text-[24px] font-[630] ">{{ narsalar.tavsifi }}</h1>
+                    <div class="felex">
+                        <span>⭐ ⭐ ⭐ ⭐ ⭐ <a class="text-[16px] hover:text-[#4b4b4c] text-[#8b8e99] border-b" href="#">4.9 (3745 sharh)</a></span>
+                        <span class="text-[16px] hover:text-[#4b4b4c] text-[#8b8e99]">• 61 fotosurat</span>
+                        <span class="text-[16px] hover:text-[#4b4b4c] text-[#8b8e99]">• 3800 + buyurtma</span>
+                    </div>
+                </div>
+                <div class="w-[932px] h-[540px] mt-[50px] flex  ">
+                    <div class="flex items-center gap-4 ">
+                        <div class="overflow-hidden h-[468px] w-[63px] mr-[10px]">
+                            <div id="slider" class="flex flex-col transition-transform duration-300">
+                                <button id="upBtn" class="p-2 bg-white shadow rounded hover:bg-gray-200 absolute top-[10px] z-[2px] fixed">
+                                ↑
+                                </button>
+                         
+                                <img src="https://images.uzum.uz/d6nvj3dsp2tohdbdqp30/original.jpg"
+                                class="w-[63px] h-[84px] object-cover rounded-lg mb-3 border-2 border-transparent hover:border-black cursor-pointer"/>
+            
+                                <img src="https://images.uzum.uz/d6nvj3dsp2tohdbdqp30/original.jpg"
+                                     class="w-[63px] h-[84px] object-cover rounded-lg mb-3 border-2 border-transparent hover:border-black cursor-pointer"/>
+
+                                <img src="https://images.uzum.uz/d6nvj3dsp2tohdbdqp30/original.jpg"
+                                     class="w-[63px] h-[84px] object-cover rounded-lg mb-3 border-2 border-transparent hover:border-black cursor-pointer"/>
+
+                                <img src="https://images.uzum.uz/d6nvj3dsp2tohdbdqp30/original.jpg"
+                                     class="w-[63px] h-[84px] object-cover rounded-lg mb-3 border-2 border-transparent hover:border-black cursor-pointer"/>
+
+                                <img src="https://images.uzum.uz/d6nvj3dsp2tohdbdqp30/original.jpg"
+                                     class="w-[63px] h-[84px] object-cover rounded-lg mb-3 border-2 border-transparent hover:border-black cursor-pointer"/>
+
+                                <button class="absolute z-[2]" id="downBtn" class="p-2 bg-white shadow rounded hover:bg-gray-200 botton-[10px] z-[2px]">
+                                ↓
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[858px] h-[540px] flex justify-between">
+                        <img class="w-[419px] h-[540px] rounded-[18px]" src="{{ narsalar.rasm.url }}" srcset="" alt="">
+                        <img class="w-[419px] h-[540px] rounded-[18px]" srcset="https://images.uzum.uz/d6nvj3gs9rf3ubr0v19g/original.jpg 1x, https://images.uzum.uz/d6nvj3gs9rf3ubr0v19g/original.jpg 2x" alt="">
+                    </div>
+                    
+                </div>
+                <div class="w-[932px] h-[388px]  mt-[20px]">
+                    <div class="w-[244px] h-[24px] mb-[16px] flex items-center justify-between">
+                        <span class="text-[22px] font-[630] ">4.9</span>
+                        <span>⭐ ⭐ ⭐ ⭐ ⭐ </span>
+                        <span class="text-[14px] text-[#7e] ">3745 sharh</span>
+                    </div>
+                    <div class="w-[932px] h-[86px] flex items-center gap-5 ">
+                        <img class="w-[86px] h-[86px] rounded-[10px]" srcset="https://images.uzum.uz/d7dqk2rsv8vlb6mnvcn0/feedback_40.jpg 1x, https://images.uzum.uz/d7dqk2rsv8vlb6mnvcn0/feedback_40.jpg 2x" alt="">
+                        <img class="w-[86px] h-[86px] rounded-[10px]" srcset="https://images.uzum.uz/d7dqk2rsv8vlb6mnvcn0/feedback_40.jpg 1x, https://images.uzum.uz/d7dqk2rsv8vlb6mnvcn0/feedback_40.jpg 2x" alt="">
+                        <img class="w-[86px] h-[86px] rounded-[10px]" srcset="https://images.uzum.uz/d7dqk2rsv8vlb6mnvcn0/feedback_40.jpg 1x, https://images.uzum.uz/d7dqk2rsv8vlb6mnvcn0/feedback_40.jpg 2x" alt="">
+                        <img class="w-[86px] h-[86px] rounded-[10px]" srcset="https://images.uzum.uz/d7dqk2rsv8vlb6mnvcn0/feedback_40.jpg 1x, https://images.uzum.uz/d7dqk2rsv8vlb6mnvcn0/feedback_40.jpg 2x" alt="">
+                        <img class="w-[86px] h-[86px] rounded-[10px]" srcset="https://images.uzum.uz/d7dqk2rsv8vlb6mnvcn0/feedback_40.jpg 1x, https://images.uzum.uz/d7dqk2rsv8vlb6mnvcn0/feedback_40.jpg 2x" alt="">
+                        <img class="w-[86px] h-[86px] rounded-[10px]" srcset="https://images.uzum.uz/d7dqk2rsv8vlb6mnvcn0/feedback_40.jpg 1x, https://images.uzum.uz/d7dqk2rsv8vlb6mnvcn0/feedback_40.jpg 2x" alt="">
+                        <img class="w-[86px] h-[86px] rounded-[10px]" srcset="https://images.uzum.uz/d7dqk2rsv8vlb6mnvcn0/feedback_40.jpg 1x, https://images.uzum.uz/d7dqk2rsv8vlb6mnvcn0/feedback_40.jpg 2x" alt="">
+                        <img class="w-[86px] h-[86px] rounded-[10px]" srcset="https://images.uzum.uz/d7dqk2rsv8vlb6mnvcn0/feedback_40.jpg 1x, https://images.uzum.uz/d7dqk2rsv8vlb6mnvcn0/feedback_40.jpg 2x" alt="">
+                        <img class="w-[86px] h-[86px] rounded-[10px]" srcset="https://images.uzum.uz/d7dqk2rsv8vlb6mnvcn0/feedback_40.jpg 1x, https://images.uzum.uz/d7dqk2rsv8vlb6mnvcn0/feedback_40.jpg 2x" alt="">
+                    </div>
+                    <div class="w-[932px] h-[170px] mt-[20px] flex items-center justify-between relative">
+                        <button class="absolute z-[2px] rounded-[50px] w-[32px] h-[32px] flex items-center justify-center bg-[white] left-[-15px]"><i class="bi bi-chevron-left"></i></button>
+                        <button class="absolute z-[2px] rounded-[50px] w-[32px] h-[32px] flex items-center justify-center bg-[white] right-[-15px]"><i class="bi bi-chevron-right"></i></button>
+ 
+ 
+                        <div class="w-[460px] h-[170px] p-[20px] rounded-[15px] border border-2">
+                            <div class="w-[208px] h-[18px] flex justify-between">
+                                <h1 class="font-[630]">Mexriniso</h1>
+                                <span class="flex">⭐ ⭐ ⭐ ⭐</span>
+                            </div>
+                            <span class="text-[14px] txt-[#7e818c] mt-[4px] mb-[20px]">24 Aprel</span>
+                            <h1 class="mt-[-4px]"><span class="font-[630]" >Afzaliklari:</span>Отлично упакованою, Дешово, Качестенный</h1>
+                            <h1 class="mt-[-4px]"><span class="font-[630]" >Kamchiliklari:</span>Нет</h1>
+                            <h1 class="mt-[-4px]"><span class="font-[630]" >Izoh:</span>Всем спасибо рекомендую всеь</h1>
+                        </div>
+                        <div class="w-[460px] h-[170px] p-[20px] rounded-[15px] border border-2">
+                            <div class="w-[208px] h-[18px] flex justify-between">
+                                <h1 class="font-[630]">Mexriniso</h1>
+                                <span class="flex">⭐ ⭐ ⭐ ⭐</span>
+                            </div>
+                            <span class="text-[14px] txt-[#7e818c] mt-[4px] mb-[20px]">24 Aprel</span>
+                            <h1 class="mt-[-4px]"><span class="font-[630]" >Afzaliklari:</span>Отлично упакованою, Дешово, Качестенный</h1>
+                            <h1 class="mt-[-4px]"><span class="font-[630]" >Kamchiliklari:</span>Нет</h1>
+                            <h1 class="mt-[-4px]"><span class="font-[630]" >Izoh:</span>Всем спасибо рекомендую всеь</h1>
+                        </div>
+                    </div>
+                    <button class="w-[932px] h-[56px] rounded-[10px] bg-[#e6e8ed] mt-[16px] font-[630] hover:bg-[#d0d3d9]">Hamma sharhlarni korish</button>
+                    <button class="w-[153px] h-[40px] rounded-[30px] bg-[black] text-[white] mt-[25px] mb-[40px]">Mahsulotlar tvsifi</button>
+                    <p class="text-[14px] text-[#1f2026]">Yuqori sifatli, qor-oq, havodor, mayda maydalangan eng yuqori navli un har qanday xamir ovqatlar va xamir mahsulotlari uchun juda mos <br> keladi.</p>
+                </div>
+
+            </div>
+                <div>
+                    <div class="w-[385px] h-[454px] rounded-[20px] border border-2 pt-[14px] pb-[24px] pl-[20px] border-[#dadadc] pr-[20px]">
+                    <h1 class="text-[32px] font-[630] text-[#7f4dff]">{{ narsalar.narxi }} so'm</h1>
+                    <p class="font-[620]">Uzum kartasiz Uzum {{ narsalar.skidkasi }} so`m <span class="line-through text-[#dadadc]">39 000</span></p>
+                    <div class="w-[342px] h-[91px] rounded-[10px] mt-[20px]   bg-[#f0f2f5] flex items-center flex-col">
+                        <div class="w-[318px] h-[31px] flex items-center justify-between pl-[12px] mt-[12px] rounded-[10px] pr-[12px] bg-[#e9ebf0]">
+                            <button class="w-[82px]  text-[14px] font-[620] h-[27px] rounded-[10px] bg-[white]">24 oy</button>
+                            <button class="w-[82px]  text-[14px] font-[620] h-[27px] rounded-[10px]">12 oy</button>
+                            <button class="w-[82px]  text-[14px] font-[620] h-[27px] rounded-[10px]">6 oy</button>
+                            <button class="w-[82px]  text-[14px] font-[620] h-[27px] rounded-[10px]">3 oy</button>
+                        </div>
+                        <div class="w-[342px] h-[43px] flex justify-between pl-[12px] pr-[12px] mb-[15px] pt-[8px] pb-[8px]">
+                            <div>
+                                <h1 class="text-[12px]"><span class="bg-[yellow] font-[630] text-[16px] p-[3px] pl-[5px] pr-[5px]">1 770 so'm</span>     ⅹ 24</h1>
+                            </div>
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+                        <div class="w-[342px] h-[47px] mt-[20px] bg-[f0f2f5]  mb-[15px] flex justify-between ">
+                            <button class="w-[268px] h-[47px] bg-[#e6e8ed] rounded-[10px] font-[620]">1 klikda harid qilish</button>
+                            <button class="w-[62px] h-[47px] bg-[#e6e8ed] rounded-[10px]"><i class="bi bi-heart"></i></button>
+                        </div>
+                        <button class="w-[342px] h-[56px] pt-[14px] pb-[14px] rounded-[10px] bg-[#7000ff] mt-[10px] text-[white] "><h1 class="text-[white] mt-[-5px]">Savatga qoshish</h1><p class="mt-[-5px] text-[12px]">Ertaga etkazib beramiz</p></button>
+                        <div class="w-[342px] h-[31px] flex  mt-[10px] mb-[10px] ">
+                            <div class="w-[32px] h-[32px] rounded-[10px] bg-[#d7f5dd] flex items-center justify-center"><i class="bi bi-check-lg"></i></div>
+                            <span class="ml-[5px] text-[14px] text-[#6a6a69]">10339 dona xarid qilish mumkin</span>
+                        </div>
+                        <div class="w-[342px] h-[31px] flex  mt-[10px] mb-[10px] ">
+                            <div class="w-[32px] h-[32px] rounded-[10px] flex items-center justify-center"><i class="bi bi-bag-check text-[#9972ff] text-[30px] mt-[-20px]"></i></div>
+                            <span class="ml-[5px] text-[14px] text-[#6a6a69]">Bu haftada 2072 kishi sotib oldi</span>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+  <script>
+    const slider = document.getElementById("slider");
+    const upBtn = document.getElementById("upBtn");
+    const downBtn = document.getElementById("downBtn");
+
+    let index = 0;
+    const itemHeight = 96; // 84px + margin
+
+    upBtn.onclick = () => {
+      if (index > 0) {
+        index--;
+        slider.style.transform = `translateY(-${index * itemHeight}px)`;
+      }
+    };
+
+    downBtn.onclick = () => {
+      if (index < slider.children.length - 4) {
+        index++;
+        slider.style.transform = `translateY(-${index * itemHeight}px)`;
+      }
+    };
+  </script>
+
+{% endblock %}

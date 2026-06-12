@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+        content="ElektrikJan - Avtomobillar elektr tizimlarini diagnostika va ta'mirlash xizmati. ECU, sensorlar, signalizatsiya, starter, generator va barcha avtoelektrik muammolariga professional yechim.">
+    <meta name="keywords"
+        content="ElektrikJan, avtoelektrik, avtomobil elektrigi, ECU diagnostika, starter ta'miri, generator ta'miri, avto diagnostika, signalizatsiya o'rnatish, mashina elektrigi, auto electrician Uzbekistan">
+    <meta name="author" content="ElektrikJan">
+    <meta name="robots" content="index, follow">
+
+    <title>Document</title>
+        <link rel="manifest" href="{% static 'manifest.json' %}">
+    <meta name="theme-color" content="#0d6efd">
+    <link rel="apple-touch-icon" href="{% static 'icons/logo.jpg' %}">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Elektrikjan">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <link rel="apple-touch-icon" href="{% static 'icons/logo.jpg' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+<body>
+    {% include "navigation.html" %}
+   {% block content %}
+   {% endblock %}
+   {% include "footer.html" %}
+
+   
+</body>
+</html>

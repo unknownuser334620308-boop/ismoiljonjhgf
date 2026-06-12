@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <style>
+@keyframes qimirla {
+  0%   { transform: rotate(0deg); }
+
+
+  96%  { transform: rotate(0deg); }
+
+  97%  { transform: rotate(-10deg); }
+  98%  { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.element {
+  animation: qimirla 3.5s infinite;
+}
+
+.rasm{
+    position: absolute;
+    top: -150px;
+    width: 1352px;
+    height: 1699px;
+    background-image: url(bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80% 80%;
+}
+</style>
+<body>
+    <header class=" h-[88px] flex justify-center relative z-[4] bg-[#3f0088]">
+        <nav class="w-[1206px] h-[88px] flex items-center justify-between">
+            <a href="{% url 'home' %}">
+
+                <img class="w-[216px] h-[32px]" src="https://promo.uzum.uz/landings/_ipx/_/landings/img/uzum-market-logo.svg" alt="">
+            </a>
+            <div class="w-[684px] h-[40px] flex items-center justify-between ">
+                <a class="text-[15px] font-[630] text-[white]" href="#">Topshirish punktini qanday ochish mumkin</a>
+                <a class="text-[15px] font-[630] text-[white]" href="#">Ochish uchun nima kerak</a>
+                <a class="text-[15px] font-[630] text-[white]" href="#">Brendbuk</a>
+                <button class="flex font-[630] justify-between items-center pl-[10px] pr-[10px] w-[101px] h-[40px] text-[white] rounded-[10px] hover:bg-[#764da5]"><img class="w-[24px] h-[24px] rounded-[50px] " src=" https://upload.wikimedia.org/wikipedia/commons/thu…f_Uzbekistan.svg/250px-Flag_of_Uzbekistan.svg.png" alt="">UZ <i class="fa-solid fa-angle-down mb-[-3px]"></i></button>
+            </div>
+        </nav>
+    </header>
+    <!-- BIRINCHI SECTION -->
+     <section class="w-[100%] h-[740px] flex justify-center bg-[#3f0088]">
+        <div class="w-[1206px] relative h-[740px] flex items-center">
+            <div class="w-[554px] h-[740px] pt-[120px] pl-[40px]">
+                <h1 class="text-[55px] text-[white] font-[630] leading-[1.2]">Uzum Market <br>topshirish <br>punktini oching</h1>
+                <p class="text-[20px] text-[white] font-[620] mt-[20px] mb-[60px]">Ochilishda va ishning birinchi oylarida moliyaviy jihatdan yordamlashamiz</p>
+                <button class="w-[214px] h-[56px] rounded-[10px] bg-[#ffff00] font-[630] text-[#1f2026]" >Ochilish joyini tanlash</button>
+            </div>
+            <img class="w-[584px] absolute z-[2] right-[10px] top-[50px] h-[554px] element" src="https://promo.uzum.uz/landings/img/pvz/pvz.webp" alt="">
+            <div class="rasm"></div>
+        </div> 
+     </section>
+    <section
+        class="w-[100%]  m-auto bg-[#161616] mt-[0px] h-[1219px] mt-[-120px] pt-[100px] rounded-tl-[120px] rounded-tr-[120px] text-center text-shadow-center bg-[#3A0D73]">
+        <div class="w-[1280px] h-[1019px] ml-[35px] mr-[35px] pl-[80px] pt-[100px] m-auto pr-[80px]">
+            <div class="w-[1050px] h-[57px] m-auto text-[50px]">
+                <h2 class=" font-[700] w-[1050px] h-[57px] m-auto text-[#FFFFFF]">Birinchi oydanoq pul
+                    ishlashni
+                    boshlang</h2>
+
+                <div class="w-[452px] h-[96px]  ">
+                    <div class="flex items-center gap-[25px]">
+                        <div class="w-[425px] h-[36px]">
+                            <h1><button
+                                    class="w-[80px] text-center h-[36px] pt-[8px] pb-[8px] pl-[12px] pr-[12px] text-[14px] text-[#e9ebf0] bg-[#ffffff29] rounded-[96px] hover:bg-[#3d3b40] cursor-pointer ">
+                                    Toshkent
+                                </button></h1>
+                        </div>
+                        <div class="w-[425px] h-[36px]">
+                            <h1><button
+                                    class="w-[112px] h-[36px] pt-[8px] pb-[8px] pl-[12px] pr-[12px] text-[14px] text-[#e9ebf0]  hover:bg-[#3d3b40] cursor-pointer bg-[#ffffff29] rounded-[96px]">
+                                    Yirik shaharlar
+                                </button></h1>
+                        </div>
+                        <div class="w-[425px] h-[36px]">
+                            <h1><button
+                                    class="w-[216px] h-[36px] pt-[8px] pb-[8px] pl-[12px] cursor-pointer pr-[12px] text-[14px] text-[#1f2026] bg-[#dee0e5] rounded-[96px]">
+                                    Boshqa shaharlar va qishloqlar
+                                </button></h1>
+                        </div>
+                    </div>
+                    <h2 class="w-[368px] h-[18px] text-[14px] mt-[44px] m-auto cursor-pointer text-[#ffffffb2]">Yirik
+                        shaharlar va Toshkent viloyatidan boshqa hammasi</h2>
+                </div>
+                <div class="w-[1120px] h-[546px] m-auto flex items-center gap-[-12px] ">
+                    <div class="w-[534px] h-[546px]">
+                        <div
+                            class="w-[470px] h-[482px] relative top-[25px] p-[32px] text-shadow-lg bg-[#1F0939] rounded-[32px]">
+                            <span class="w-[470px] text-[#fffffff2] text-[28px]">Har bir olib ketilgan tovardan</span>
+                            <div class="w-[470px] h-[480px] ">
+                                <span
+                                    class="w-[304px] relative left-[] text-[200px] text-[#fffffff2] font-[700] text-center">5%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+
+
+                        <div class="w-[546px] h-[272px] bg-[#160926] rounded-[40px]  p-[32px]">
+                            <h2 class=" w-[400px] h-[72px] text-[#fffffff2] text-[28px] text-start font-[600]">Birinchi
+                                6 oyda haqiqiy daromadni kafolatlaymiz</h2>
+                            <div class="w-[482px] h-[84px] ">
+                                <h3
+                                    class="w-[297px] h-[] text-[#ffff00] text-start text-[50px] font-[700] relative top-[10px]">
+                                    17 400 000 </h3>
+                                <h4
+                                    class="w-[133px] h-[] text-[#ffff00] text-start text-[24px] font-[700] relative top-[10px]">
+                                    so'm oyiga
+                                </h4>
+
+                            </div>
+                            <h5 class="w-[482px] text-[#ffffffb3] text-[14px] text-start mt-[45px]">
+                                Bundan kam topsangiz, farqini to'lab beramiz
+                            </h5>
+                        </div>
+
+
+
+                        <div class="w-[546px] h-[233px] bg-[#160926] rounded-[40px] mt-[15px] p-[32px]">
+                            <h2 class=" w-[332px] h-[72px] text-[#fffffff2] text-[28px] text-start font-[600]">Ochilish
+                                bonusi</h2>
+                            <div class="w-[482px] h-[84px] ">
+                                <div class="flex items-center">
+
+                                    <h3
+                                        class="w-[269px] h-[] text-[#ffff00] text-start text-[50px] font-[700] relative top-[10px] ">
+                                        6 100 000 </h3>
+                                    <h4
+                                        class="w-[59px] text-[#FFFF00] text-[24px] relative top-[25px] left-[-43px] font-[700]">
+                                        so'm</h4>
+                                </div>
+
+                            </div>
+                            <h5 class="w-[482px] text-[#ffffffb3] text-[14px] text-start mt-[12px]">
+                                Topshirish punkiti 25 kun ichida ochilganda
+                            </h5>
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="w-[1120px] h-[200px] text-center m-auto">
+                    <h3 class="w-[] text-[#fff] text-[28px] font-[600] relative top-[25px] text-center">Har bir
+                        bosqichdagi
+                        daromadingiz</h3>
+                    <div class="flex items-center ">
+                        <div class="w-[300px] h-[104px] relative top-[50px] m-auto left-[62px]">
+                            <div class=" relative top-[4px] rounded-full w-[40px] h-[40px] p-[8px] bg-[#fff]">
+                                <img class="text-center absolute left-[9px]"
+                                    src="https://promo.uzum.uz/landings/_ipx/_/landings/img/pvz/check-solid.svg" alt="">
+                                <p
+                                    class="w-[200px] h-[24px] text-center relative top-[45px] left-[-90px] text-[#fff] text-[20px] font-[700]">
+                                    Ochilish</p>
+                                <p
+                                    class="w-[200px] h-[24px] text-center relative top-[45px] left-[-90px] text-[#ffff00] text-[16px] font-[700]">
+                                    bonus</p>
+                            </div>
+                            <hr class="w-[230px] text-[#FFFFFF] border-[1.5px] relative left-[60px] top-[-15px]">
+                        </div>
+                        <!-- 6 oy -->
+                        <div class="w-[300px] h-[104px] relative left-[] top-[50px] m-auto">
+                            <div class=" relative top-[4px] rounded-full w-[40px] h-[40px] p-[8px] bg-[#fff]">
+                                <img class="text-center absolute left-[9px]"
+                                    src="https://promo.uzum.uz/landings/_ipx/_/landings/img/pvz/shield-tick-solid.svg"
+                                    alt="">
+                                <p
+                                    class="w-[200px] h-[24px] text-center relative top-[45px] left-[-90px] text-[#fff] text-[20px] font-[700]">
+                                    Birinchi 6 oy</p>
+                                <p
+                                    class="w-[200px] h-[24px] text-center relative top-[45px] left-[-90px] text-[#ffff00] text-[16px] font-[700]">
+                                    kamida <br> 17.4 mln so'm</p>
+                            </div>
+                            <hr class="w-[230px] text-[#FFFFFF] border-[1.5px] relative left-[60px] top-[-15px]">
+                        </div>
+                        <!-- 7+ oy -->
+                        <div class="w-[300px] h-[104px] relative top-[50px] left-[-62px] m-auto">
+                            <div class=" relative top-[4px] rounded-full w-[40px] h-[40px] p-[8px] bg-[#fff]">
+                                <img class="text-center absolute left-[9px]"
+                                    src="https://promo.uzum.uz/landings/_ipx/_/landings/img/pvz/flash-solid.svg" alt="">
+                                <p
+                                    class="w-[200px] h-[24px] text-center relative top-[45px] left-[-90px] text-[#fff] text-[20px] font-[700]">
+                                    7+ oy</p>
+                                <p
+                                    class="w-[200px] h-[24px] text-center relative top-[45px] left-[-90px] text-[#ffff00] text-[16px] font-[700]">
+                                    harbir olib ketilgan tovardan 6%</p>
+                            </div>
+                            <hr class="w-[230px] text-[#FFFFFF] border-[1.5px] relative left-[60px] top-[-15px]">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+  <div class="bg-[#E4E6EB] w-[1520px] h-[900px]">
+
+
+        <div class="container max-w-[1200px] mx-auto">
+
+
+
+            <h2 class="text-[50px] font-[500] text-center mb-[30px]">O‘z topshirish punktingizni <br> ochish — oson</h2>
+
+            <div class="flex items-center gap-[10px]">
+                <div class="w-[903px] h-[226px] rounded-[40px] bg-white p-[30px] ">
+                    <h1 class="text-[28px] font-[500] mb-[15px]">Boshlashda yordam beramiz</h1>
+                    <p class="text-[18px] text-[#656773]">Tayyor dasturiy ta'minotni taqdim etamiz, xodimlarni o‘qitib,
+                        dizayn-loyiha sovg‘a</p>
+                    <img class=" w-[307px] h-[307px] relative bottom-[170px] left-[570px]"
+                        src="https://promo.uzum.uz/landings/img/pvz/rocket.avif" alt="">
+                </div>
+
+                <div class="w-[358px] h-[226px] bg-[white] rounded-[30px] p-[30px]">
+
+                    <h1 class="text-[28px] font[500px]">Minimal sarmoya</h1>
+                    <p class="text-[18px] text-[#656773]">Boshlanishda — faqat ishlash joyingizning remonti</p>
+                </div>
+
+            </div>
+
+            <div class="mt-[25px] flex items-center gap-[10px] ">
+                <div class="w-[412px] h-[226px] bg-[white] rounded-[30px] p-[30px]">
+                    <h1 class="text-[28px] font-[500] mb-[15px]">Tezkor <br> ishga tushirish</h1>
+                    <p class="text-[18px] text-[#656773]">Arizadan birinchi buyurtmani topshirishgacha — ikki oy</p>
+                </div>
+                <div class="w-[849px] h-[226px] bg-[white] rounded-[35px] p-[30px] flex items-center">
+                    <div>
+                        <h1 class="text-[28px] font-[500] mb-[15px]">Hech qanday yashirin <br> to'lovlarsiz</h1>
+                        <p class="text-[18px] text-[#656773]">Biz qat’iy shartnoma asosida ishlaymiz</p>
+
+                    </div>
+                    <img class="w-[224px] h-[224px] ml-[200px]" src="https://promo.uzum.uz/landings/img/pvz/coins.avif"
+                        alt="">
+
+                </div>
+            </div>
+
+            <div
+                class="bg-[#7000FF] w-[248px] h-[56px] rounded-[15px] flex items-center justify-center m-auto mt-[30px]">
+                <h1 class="font-[500] text-white ">Topshirish punkitini ochish</h1>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="container max-w-[1200px] mx-auto mt-[100px]">
+        <div>
+            <h2 class="text-[50px] flex-[600] text-center mb-[50px] ">Bizga ishonishning sabablari</h2>
+
+
+
+
+
+<div class="w-full flex justify-center">
+    
+    <div class="grid grid-cols-2 gap-[100px]">
+
+        <div class="w-[631px] h-[494px] bg-black rounded-[20px] p-[30px]">
+            <h1 class="text-yellow-600 text-[60px] font-[500]">> 23 000 000</h1>
+            <h2 class="text-white text-[20px]">bir yilda berilgan buyurtmalar</h2>
+            <img class="w-[387px] h-[332px] ml-[200px] mt-[50px]" src="https://promo.uzum.uz/landings/img/pvz/box-with-tape.avif" alt="">
+        </div>
+
+        
+        <div class="flex flex-col gap-[20px]">
+
+            <div class="w-[631px] h-[230px] bg-black rounded-[20px] p-[30px]">
+                <h1 class="text-yellow-600 text-[60px] mb-[20px] font-[500]">> 17 000</h1>
+                <h2 class="text-[20px] text-white">Uzum Market’dagi faol sotuvchilar</h2>
+            </div>
+
+            <div class="flex gap-[50px]">
+                <div class="w-[250px] h-[240px] bg-black rounded-[20px] p-[30px]">
+                    <h1 class="text-yellow-600 text-[60px] mb-[20px] font-[500]">1 282</h1>
+                    <h2 class="text-[20px] text-white">topshirish punktlari <br> va do‘konlar</h2>
+                </div>
+                <div class="w-[250px] h-[240px] bg-black rounded-[20px] p-[30px]">
+                    <h1 class="text-yellow-600 text-[60px] mb-[20px] font-[500]">416</h1>
+                    <h2 class="text-[20px] text-white">aholi punktlari</h2>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+        </div>
+
+
+        
+    </div>
+  <div class="text-white">
+        <div class="w-[1140px] m-auto mt-[50px] mb-[180px]">
+            <h1 class="text-[50px] font-bold text-center text-[#1F2026]">Topshirish punktingiz uchun <br> joy tanlang
+            </h1>
+            <iframe class="rounded-[25px] mt-[30px]" src="https://www.google.com/maps?q=Tashkent&output=embed"
+                width="100%" height="600" style="border:0;" loading="lazy">
+            </iframe>
+            <div class="flex gap-[30px]">
+                <div class="flex gap-[15px] mt-[10px]">
+                    <i class=" text-[#D4B2FF] text-[25px] mt-[6px] fa-solid fa-hexagon"></i>
+                    <h2 class="text-[20px] font-bold">Tavsiya etamiz</h2>
+                </div>
+
+                <div class="flex gap-[15px] mt-[10px]">
+                    <i class=" text-[#DCDDE0] text-[25px] mt-[6px] fa-solid fa-hexagon"></i>
+                    <h2 class="text-[20px] font-bold">Bu yerda ochib bo‘lmaydi</h2>
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <img src="https://promo.uzum.uz/landings/img/pvz/steps/border.svg" alt="" width="5065" height="632">
+            <div class="w-full h-[1900px] bg-[#1F2026] relative bottom-[10px]">
+                <h1 class="text-white font-bold text-[50px] text-center bir">Topshirish punktini <br> ochish tartibi
+                </h1>
+                <div class=" m-auto w-[1100px] mt-[50px]">
+                    <div class="flex gap-[30px]">
+                        <div>
+                            <img src="https://promo.uzum.uz/landings/img/pvz/steps/index-background.svg" alt=""
+                                width="74" height="74">
+                            <h1 class="relative text-white text-[28px] font-bold top-[-50px] left-[30px]">1</h1>
+                            <div class="bg-[#6A2BD6] w-[3px] h-[180px] ml-[30px] "></div>
+
+
+                        </div>
+                        <div>
+                            <h2 class="text-[30px] font-[700] ">Joy toping</h2>
+                            <div class="flex gap-[6px] mt-[5px]">
+                                <p class="text-[30px] absolute top-[230px] font-bold ">.</p>
+                                <h5 class="ml-[15px]">Maydoni 20 m² va undan kattaroq</h5>
+                            </div>
+                            <div class="flex gap-[6px] mt-[10px]">
+                                <p class="text-[30px] absolute top-[265px] font-bold ">.</p>
+                                <h5 class="ml-[15px]">Avtoturargohi bor</h5>
+                            </div>
+                            <div class="flex gap-[6px] mt-[10px]">
+                                <p class="text-[30px] absolute top-[300px] font-bold ">.</p>
+                                <h5 class="ml-[15px]">Fasadga Uzum Market belgisini osish mumkin</h5>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="rounded-[20px] ml-[270px] "
+                                src="https://promo.uzum.uz/landings/img/pvz/steps/map.avif" alt="" width="350"
+                                height="230">
+                        </div>
+                    </div>
+                    <div class="flex gap-[30px]">
+                        <div class="mt-[30px]">
+                            <img src="https://promo.uzum.uz/landings/img/pvz/steps/index-background.svg" alt=""
+                                width="74" height="74">
+                            <h1 class="relative text-white text-[28px] font-bold top-[-50px] left-[30px]">2</h1>
+                            <div class="bg-[#6A2BD6] w-[3px] h-[180px] ml-[30px] "></div>
+                        </div>
+                        <div>
+                            <div class=" mt-[15px]">
+                                <h2 class="text-[30px] font-[700] ">Ariza qoldiring</h2>
+                                <h5 class="">Biz sizdan joy manzili va suratlarini so'raymiz. Hammasini tekshirib, 3-5
+                                    kun
+                                    ichida tasdiqlaymiz</h5>
+
+                            </div>
+
+                        </div>
+                        <div>
+                            <img class="rounded-[20px]  " src="https://promo.uzum.uz/landings/img/pvz/steps/chat.avif"
+                                alt="" width="380" height="250">
+                        </div>
+
+                    </div>
+                    <div class="flex gap-[30px]">
+                        <div class="mt-[30px]">
+                            <img src="https://promo.uzum.uz/landings/img/pvz/steps/index-background.svg" alt=""
+                                width="74" height="74">
+                            <h1 class="relative text-white text-[28px] font-bold top-[-50px] left-[30px]">3</h1>
+                            <div class="bg-[#6A2BD6] w-[3px] h-[180px] ml-[30px] "></div>
+                        </div>
+                        <div>
+                            <div class=" mt-[15px]">
+                                <h2 class="text-[30px] font-[700] ">Shartnomani imzolang</h2>
+                                <h5 class="">Yuridik shaxs bo‘lmasangiz, uni rasmiylashtiring. Biz shartnoma <br> tuzib,
+                                    imzolash uchun sizga yuboramiz.</h5>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="rounded-[20px] ml-[170px] "
+                                src="https://promo.uzum.uz/landings/img/pvz/steps/workers.avif" alt="" width="360"
+                                height="240">
+                        </div>
+
+                    </div>
+                    <div class="flex gap-[30px]">
+                        <div>
+                            <img src="https://promo.uzum.uz/landings/img/pvz/steps/index-background.svg" alt=""
+                                width="74" height="74">
+                            <h1 class="relative text-white text-[28px] font-bold top-[-50px] left-[30px]">4</h1>
+                            <div class="bg-[#6A2BD6] w-[3px] h-[180px] ml-[30px] "></div>
+
+
+                        </div>
+                        <div>
+                            <h2 class="text-[30px] font-[700] ">Binoni ta'mirlang</h2>
+                            <div class="flex gap-[6px] mt-[5px]">
+                                <p class="text-[30px] absolute bottom-[520px] font-bold ">.</p>
+                                <h5 class="ml-[15px]">Topshirish punktingiz brendbukdagidek bo‘lishi uchun sizga
+                                    dizayn-loyihani <br> sovg‘a qilamiz. Ortiqcha narsalarni o‘ylashga hojat qolmaydi
+                                </h5>
+                            </div>
+                            <div class="flex gap-[6px] mt-[10px]">
+                                <p class="text-[30px] absolute bottom-[460px] font-bold ">.</p>
+                                <h5 class="ml-[15px]">Ochilish jarayonining barcha bosqichlarida yordam beradigan Uzum
+                                    <br>
+                                    Market’dan yordamchi biriktiramiz
+                                </h5>
+                            </div>
+
+
+                        </div>
+                        <div>
+                            <img class="rounded-[20px] ml-[80px] "
+                                src="https://promo.uzum.uz/landings/img/pvz/steps/dp.avif" alt="" width="360"
+                                height="240">
+                        </div>
+                    </div>
+                    <div class="flex gap-[30px]">
+                        <div class="mt-[30px]">
+                            <img src="https://promo.uzum.uz/landings/img/pvz/steps/index-background.svg" alt=""
+                                width="74" height="74">
+                            <h1 class="relative text-white text-[28px] font-bold top-[-50px] left-[30px]">5</h1>
+                            <div class="bg-[#6A2BD6] w-[3px] h-[180px] ml-[30px] "></div>
+                        </div>
+                        <div>
+                            <div class=" mt-[15px]">
+                                <h2 class="text-[30px] font-[700] ">Xodim toping</h2>
+                                <h5 class="">Biz unga buyurtmalarni qanday topshirish va mijozlar bilan qanday<br>
+                                    muloqot
+                                    qilishni o‘rgatamiz. Xodim yollashning imkoni bo‘lmasa, <br> biz yordam beramiz</h5>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="rounded-[20px] ml-[150px] "
+                                src="https://promo.uzum.uz/landings/img/pvz/steps/class_room.avif" alt="" width="368"
+                                height="250">
+                        </div>
+
+                    </div>
+                     <div class="flex gap-[30px]">
+                        <div class="mt-[20px]">
+                            <img src="https://promo.uzum.uz/landings/img/pvz/steps/index-background.svg" alt=""
+                                width="74" height="74">
+                            <h1 class="relative text-white text-[28px] font-bold top-[-50px] left-[30px]">6</h1>
+
+                        </div>
+                        <div>
+                            <h2 class="text-[30px] font-[700] ">Birinchi xaridorlarni kutib oling</h2>
+                            <div class="flex gap-[6px] mt-[5px]">
+                                <p class="text-[30px] absolute  font-bold ">.</p>
+                                <h5 class="ml-[15px]">Xaridorlar topshirish punktingizni Uzum Market’da ko‘rishadi</h5>
+                            </div>
+                            <div class="flex gap-[6px] mt-[10px]">
+                                <p class="text-[30px] absolute bottom-[-60px] font-bold ">.</p>
+                                <h5 class="ml-[15px]">Birinchi buyurtmalaringiz ombordan yetkazib beriladi</h5>
+
+                            </div>
+                            <h5 class="ml-[15px] mt-[10px] bottom-[-20px] ">Biz sizni ochilgandan keyin ham
+                                qo‘llab-quvvatlaymiz va barcha shartlar <br> bajarilganda moliyaviy yordam ko‘rsatamiz.
+                            </h5>
+
+                        </div>
+                        <div>
+                            <img style="position: relative; z-index: 2;" class="rounded-[20px] ml-[100px] "
+                                src="https://promo.uzum.uz/landings/img/pvz/steps/dp_outside.avif" alt="" width="370"
+                                height="250">
+                        </div>
+                    </div>
+                </div>
+                <div class=" gap-[30px] ">
+                    <img style="margin-bottom: 300px; transform: rotate(180deg); position: relative; bottom: 15px; z-index: 1;" class=".qora"
+                        src="https://promo.uzum.uz/landings/img/pvz/steps/border.svg" alt="" width="5080" height="700">
+                   
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <footer class="mt-[180px]">
+        <div class="w-[100%] h-[358px] pb-[60px] bg-[#5000B3]">
+            <div
+                class="w-[1351px] h-[116px] m-auto text- flex items-center justify-between pl-[40px] pr-[40px] relative top-[90px]">
+                <!--uzum logo  -->
+                <a href="{% url 'home' %}">
+                      <div class="w-[305px] h-[116px] ">
+                    <img class="w-[146px] h-[48px]" src="https://promo.uzum.uz/landings/img/uzum-market-logo-mini.svg"
+                        alt="">
+                </div>
+                </a>
+              
+                <!-- hamkorlar uchun -->
+                <div class="w-[305px] h-[116px] ">
+                    <h1 class="w-[160px] h-[28px] text-[#fff] text-[18px] mb-[8px] font-[600]">Hamkorlar uchun</h1>
+                    <h2></h2><a
+                        class="w-[160px] h-[24px] text-[14px] border-b-[1px] cursor-pointer text-[#ffffffb2] border-text-[#ffffffb2] font-[500] text-start relative top-[15px]"
+                        href="">Sotuvchi bo'lish</a></h2>
+
+                    <h3><a class="w-[160px] h-[24px] text-[14px] border-b-[1px] cursor-pointer text-[#ffffffb2] border-text-[#ffffffb2] font-[500] text-start relative top-[25px]"
+                            href="">Brendbuk</a></h3>
+                </div>
+                <!-- kompaniya -->
+                <div class="w-[305px] h-[116px] ">
+                    <h1 class="w-[160px] h-[28px] text-[#fff] text-[18px] mb-[8px] font-[600]">Kompaniya</h1>
+                    <h2></h2><a
+                        class="w-[160px] h-[24px] text-[14px] border-b-[1px] cursor-pointer text-[#ffffffb2] border-text-[#ffffffb2] font-[500] text-start relative top-[15px]"
+                        href="">Oferta shartnomasi</a></h2>
+
+                    <h3><a class="w-[160px] h-[24px] text-[14px] border-b-[1px] cursor-pointer text-[#ffffffb2] border-text-[#ffffffb2] font-[500] text-start relative top-[25px]"
+                            href="">Maxfiylik siyosati</a></h3>
+                </div>
+                <!-- Hamkorlar chati -->
+                <div class="w-[305px] h-[116px] ">
+                    <h1 class="w-[305px] h-[44px] text-[#fff] text-[18px] mb-[8px] font-[600]">Uzum Market
+                        <br> hamkorlarining chati
+                    </h1>
+                    <a href="https://t.me/+7y0Wlu7PQscxNjNi">
+                     <img class="relative top-[15px] hover:bg-[#303133] cursor-pointer rounded-full" src="https://promo.uzum.uz/landings/_ipx/s_48x48/landings/img/pvz/telegram.svg" alt="">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

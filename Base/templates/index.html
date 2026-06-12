@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<style>
+    swiper-container {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    swiper-slide {
+        text-align: center;
+        font-size: 18px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1240px;
+        height: 413px;
+
+    }
+
+    swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    swiper-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div class="container">
+    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true"
+        space-between="30" loop="true">
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script>
+        {% for main_picture in main_picture %}
+        <swiper-slide><img class="rounded-[10px]" src="{{ main_picture.picture.url }}" alt=""></swiper-slide>
+        {% endfor %}
+
+    </swiper-container>
+    <div class="mt-[10px] flex items-center gap-[15px]">
+        <a href="{% url 'Mother' %}">
+            <div class="w-[320px] h-[60px] bg-[#EFEFEF] flex items-center justify-center gap-[5px] rounded-[10px]">
+                <img class="w-[40px] h-[40px]"
+                    src="https://static.uzum.uz/static/promo_images/756b6f56-9d2d-414c-a9d3-37d40d1c808b" alt="">
+                <h1 class="text-[14px]">Onalar va bolalar uchun</h1>
+            </div>
+        </a>
+        <div class="w-[320px] h-[60px] bg-[#EFEFEF] flex items-center justify-center gap-[5px] rounded-[10px]">
+            <img class="w-[40px] h-[40px]"
+                src="https://static.uzum.uz/static/promo_images/cb3a3e9e-5b0a-4ed0-8423-f1cb9f9b3a59" alt="">
+            <h1 class="text-[14px]">Bozordan arzon</h1>
+        </div>
+        <div class="w-[320px] h-[60px] bg-[#EFEFEF] flex items-center justify-center gap-[5px] rounded-[10px]">
+            <img class="w-[40px] h-[40px]"
+                src="https://static.uzum.uz/static/promo_images/4f28d325-14b1-4ad4-b839-eb4509492cdd" alt="">
+            <h1 class="text-[14px]">Zamonaviy bozor</h1>
+        </div>
+        <div class="w-[320px] h-[60px] bg-[#EFEFEF] flex items-center justify-center gap-[5px] rounded-[10px]">
+            <img class="w-[40px] h-[40px]"
+                src="http://static.uzum.uz/static/promo_images/6ff2459e-be68-459e-a2a4-10f23ec35401" alt="">
+            <h1 class="text-[14px]">Dacha mavsumi</h1>
+        </div>
+
+    </div>
+
+    <div class="w-[1240px] mb-[50px] text-[#000] pt-[48px] pb-[32px]  mr-[]">
+        <h1 class="w-[161px] h-[36px] text-[#1f2026] cursor-pointer mb-[21px] text-[28px] font-[700] flex items-center">
+            <a href=""></a>Mashhur <span><svg data-v-4417b6c0="" width="36" height="36" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" class="ui-icon  title-icon">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M9.18945 16.4983C8.91426 16.1887 8.94215 15.7146 9.25174 15.4394L13.1211 12L9.25173 8.56055C8.94215 8.28536 8.91426 7.81131 9.18945 7.50172C9.46464 7.19213 9.93869 7.16425 10.2483 7.43943L14.7483 11.4394C14.9084 11.5818 15 11.7858 15 12C15 12.2142 14.9084 12.4182 14.7483 12.5605L10.2483 16.5605C9.93869 16.8357 9.46464 16.8079 9.18945 16.4983Z"
+                        fill="black"></path>
+                </svg></span>
+        </h1>
+
+        <div class="flex items-center justify-center flex-wrap w-[1300px] gap-[10px]">
+            {% for narsalar in narsalar %}
+            <a href="{% url 'product_detail' narsalar.id %}">
+
+                <div class="h-[464px] w-[236px] mt-[30px]">
+                    <img class="w-[236px] h-[309px] rounded-[5px]" src="{{ narsalar.rasm.url }}" alt="">
+                    <svg data-v-65388f83="" width="24" height="24" viewBox="0 0 17 16" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" alt="like"
+                        class="relative top-[-300px] left-[210px] bg-[#E1BD80] border-[2px] text-[#E1BD80] rounded-full  z-[999] ui-icon  actions__favorite-icon">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.24598 3.20325C6.73891 1.80054 4.45606 1.49005 2.69571 2.99414C0.824803 4.59268 0.554859 7.28051 2.03204 9.18134C2.6046 9.91812 3.7305 11.0342 4.82293 12.0653C5.92494 13.1054 7.02476 14.0887 7.56728 14.5691L7.57645 14.5773C7.62882 14.6237 7.6876 14.6757 7.74296 14.7174C7.80745 14.766 7.89419 14.8218 8.00791 14.8557C8.16277 14.9019 8.32952 14.9019 8.48437 14.8557C8.59809 14.8218 8.68484 14.766 8.74933 14.7174C8.80469 14.6757 8.86346 14.6237 8.91583 14.5773L8.925 14.5691C9.46753 14.0887 10.5674 13.1054 11.6694 12.0653C12.7618 11.0342 13.8877 9.91812 14.4602 9.18134C15.933 7.2862 15.7029 4.57848 13.7914 2.98975C12.0091 1.50846 9.75167 1.79994 8.24598 3.20325ZM7.86618 4.24982C6.68042 2.86356 4.76961 2.53746 3.3453 3.75441C1.87614 5.0097 1.67585 7.09332 2.82164 8.56772C3.33949 9.23409 4.40879 10.2993 5.50933 11.3381C6.6003 12.3678 7.69124 13.3431 8.23027 13.8205C8.2358 13.8254 8.24108 13.8301 8.24614 13.8346C8.25121 13.8301 8.25649 13.8254 8.26202 13.8205C8.80104 13.3431 9.89198 12.3678 10.983 11.3381C12.0835 10.2993 13.1528 9.23409 13.6706 8.56772C14.8209 7.08764 14.6382 4.99388 13.1522 3.7588C11.694 2.54686 9.80809 2.86797 8.6261 4.24982C8.53111 4.36087 8.39228 4.42481 8.24614 4.42481C8.1 4.42481 7.96118 4.36087 7.86618 4.24982Z"
+                            fill="#1F2026"></path>
+                    </svg>
+                    <div>
+                        <p class="text-[#7f4dff] text-[14px]">{{ narsalar.narxi }}</p>
+                        <p class="text-[12px] text-[#7e818c]">{{ narsalar.skidkasi }}</p>
+                        <span class="w-[98px] h-[18px] rounded-[2px] bg-[#FFFF00] p-[2px] text-[12px] ">3 18
+                            345so'm/oyiga</span>
+                        <p class="text-[12px] text-[#1f2026]">
+                            {{ narsalar.tavsifi }}
+                        </p>
+
+                        <h1>{{ narsalar.category }}</h1>
+
+                        <span class="text-[#4d4f59] text-[12px]">⭐️ (772 ta sharh)</span>
+                        <form action="{% url 'add_to_card' narsalar.id %}" method="post">
+                            {% csrf_token %}
+                            <button class="w-[224px] h-[32px] text-white gap-[3px] justify-center bg-[#700ff] rounded-[5px] bg-[#7000FF] flex items-center relative top-[25px] left-[0px]">
+                            <span><svg data-v-5ca410ec="" width="16" height="16" viewBox="0 0 17 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="ui-icon  cart-button__icon">
+
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M4.93384 4.90479V6.40055C4.93384 6.67669 5.1577 6.90055 5.43384 6.90055C5.70998 6.90055 5.93384 6.67669 5.93384 6.40055V4.90055H10.2672V6.40055C10.2672 6.6767 10.491 6.90055 10.7672 6.90055C11.0433 6.90055 11.2672 6.6767 11.2672 6.40055V4.90479C11.4272 4.90795 11.5656 4.91349 11.6891 4.92318C11.967 4.94496 12.1296 4.98556 12.2558 5.04548C12.5247 5.17311 12.7495 5.37785 12.9017 5.63364C12.9731 5.75371 13.0287 5.91178 13.0764 6.18643C13.125 6.46716 13.1593 6.82852 13.208 7.34854L13.311 8.44722C13.3368 8.72216 13.5806 8.92415 13.8555 8.89837C14.1305 8.8726 14.3324 8.62882 14.3067 8.35388L14.2018 7.23504C14.1554 6.73994 14.1178 6.33946 14.0616 6.01556C14.0037 5.68119 13.9201 5.38953 13.7611 5.12236C13.5075 4.69604 13.1328 4.35481 12.6846 4.14209C12.4038 4.00878 12.1056 3.95276 11.7673 3.92624C11.6064 3.91363 11.4276 3.90721 11.2285 3.90394C10.9902 2.39095 9.68046 1.23389 8.10051 1.23389C6.52056 1.23389 5.21086 2.39095 4.97256 3.90394C4.77338 3.90721 4.59458 3.91363 4.43373 3.92624C4.09541 3.95276 3.79722 4.00878 3.51637 4.14209C3.06825 4.35481 2.69353 4.69604 2.43991 5.12236C2.28096 5.38953 2.19736 5.68119 2.13937 6.01556C2.0832 6.33946 2.04566 6.73993 1.99925 7.23501L1.59526 11.5442C1.54017 12.1318 1.49588 12.6043 1.49241 12.9873C1.48886 13.3806 1.52662 13.7286 1.66648 14.0541C1.88752 14.5686 2.27487 14.9939 2.76646 15.262C3.0775 15.4317 3.42047 15.5018 3.81232 15.5349C4.19406 15.5672 4.66858 15.5672 5.25874 15.5672H8.10051C8.37665 15.5672 8.60051 15.3434 8.60051 15.0672C8.60051 14.7911 8.37665 14.5672 8.10051 14.5672H5.28121C4.66335 14.5672 4.23123 14.5668 3.89666 14.5385C3.56736 14.5106 3.38188 14.4586 3.24525 14.3841C2.9503 14.2233 2.71789 13.968 2.58527 13.6594C2.52383 13.5164 2.48938 13.3268 2.49237 12.9964C2.49541 12.6606 2.53532 12.2304 2.59299 11.6152L2.99299 7.34853C3.04175 6.82852 3.07598 6.46716 3.12467 6.18643C3.17229 5.91178 3.22789 5.75371 3.29932 5.63364C3.4515 5.37785 3.67633 5.17311 3.9452 5.04547C4.07142 4.98556 4.23399 4.94496 4.51188 4.92318C4.63541 4.91349 4.77386 4.90795 4.93384 4.90479ZM5.99182 3.90055H10.2092C9.98348 2.94499 9.12504 2.23389 8.10051 2.23389C7.07598 2.23389 6.21754 2.94499 5.99182 3.90055ZM12.1005 9.90055C12.3767 9.90055 12.6005 10.1244 12.6005 10.4006V11.9006H14.1005C14.3767 11.9006 14.6005 12.1244 14.6005 12.4006C14.6005 12.6767 14.3767 12.9006 14.1005 12.9006H12.6005V14.4006C12.6005 14.6767 12.3767 14.9006 12.1005 14.9006C11.8244 14.9006 11.6005 14.6767 11.6005 14.4006V12.9006H10.1005C9.82437 12.9006 9.60051 12.6767 9.60051 12.4006C9.60051 12.1244 9.82437 11.9006 10.1005 11.9006H11.6005V10.4006C11.6005 10.1244 11.8244 9.90055 12.1005 9.90055Z"
+                                        fill="white"></path>
+                                </svg></span>
+                            Ertaga</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script>
+
+{% endblock %}

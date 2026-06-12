@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="container">
+
+
+
+        <style>
+            .df {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+
+        <header class="w-[100%] h-[64px] flex justify-center bg-[#1f2026] ">
+
+            <nav class="w-[1190px] h-[64px] flex justify-between items-center pr-[6px] ">
+                <a href="{% url 'home' %}">
+
+                    <div class="w-[126px] h-[34px] ml-[-7px] mt-[-2px] ">
+    
+                        <svg xmlns="http://www.w3.org/2000/svg" width="126" height="34" fill="none" viewBox="0 0 114 36"
+                            class="layout__header-logo" data-v-18c8d8db="">
+                            <path fill="#ABABAB"
+                                d="M18.035 35.815c9.772 0 17.695-7.973 17.695-17.807S27.807.202 18.035.202.34 8.174.34 18.008s7.922 17.807 17.695 17.807">
+                            </path>
+                            <path fill="#3B1082"
+                                d="M5.008 20.175c-.716-4.087-1.074-6.13-.593-7.84A7.76 7.76 0 0 1 7.327 8.15c1.432-1.039 3.463-1.4 7.524-2.12l1.99-.353c4.06-.72 6.091-1.08 7.79-.597a7.7 7.7 0 0 1 4.159 2.93c1.032 1.441 1.39 3.485 2.107 7.572.716 4.086 1.074 6.13.593 7.84a7.76 7.76 0 0 1-2.912 4.185c-1.432 1.039-3.463 1.399-7.524 2.12l-1.99.352c-4.06.721-6.091 1.081-7.79.598a7.7 7.7 0 0 1-4.159-2.93c-1.032-1.442-1.39-3.485-2.107-7.572">
+                            </path>
+                            <path fill="#fff"
+                                d="M22.933 12.375c.534.118 1.05.22 1.557.35.54.138 1.073.305 1.607.456.075.022.105.051.105.138-.003 1.678.015 3.358-.007 5.036a8.05 8.05 0 0 1-1.68 4.869c-1.215 1.599-2.804 2.629-4.748 3.097a7.9 7.9 0 0 1-2.333.2c-1.868-.111-3.524-.774-4.939-2.004-1.46-1.264-2.38-2.855-2.75-4.762A8.6 8.6 0 0 1 9.6 18.11c-.003-1.59 0-3.176-.005-4.765 0-.106.034-.143.13-.173a25 25 0 0 1 3.107-.778c.01-.003.02 0 .044-.003v.123c0 1.994-.008 3.99.005 5.983.007 1.005.142 1.998.482 2.952.27.756.668 1.431 1.263 1.978.559.51 1.212.833 1.945.99 1.035.225 2.069.208 3.085-.115 1.2-.38 2.032-1.183 2.566-2.314.286-.603.457-1.244.565-1.902.12-.732.15-1.47.15-2.21v-5.34c-.003-.046-.003-.09-.003-.162">
+                            </path>
+                            <path fill="#fff"
+                                d="M19.358 16.07H16.44V9.205c.304-.096 2.339-.104 2.917-.008zm56.981-5.497c0 1.56-.876 2.28-2.18 2.28s-2.15-.71-2.15-2.28V5.421h-2.814v5.248c0 3.42 2.845 4.762 4.979 4.762s4.983-1.342 4.983-4.761V5.42h-2.813zm-9.516-2.761v-2.39h-9.137v2.39h5.407l-5.628 5.046v2.391h9.695v-2.391h-5.955zm26.414-2.579c-1.782 0-3.126.73-3.79 1.84-.68-1.11-2.15-1.84-3.68-1.84-3.006 0-4.572 1.925-4.572 4.306v5.71h2.815V9.945c0-1.14.593-2.138 1.958-2.138a1.98 1.98 0 0 1 1.51.578c.196.197.347.435.448.698.096.264.14.542.12.821v5.35h2.815v-5.35c0-1.14.67-2.102 2.018-2.102 1.35 0 2 1.003 2 2.138v5.303h2.813V9.55c0-2.38-1.45-4.305-4.475-4.305zm-40.317 5.34c0 1.56-.875 2.28-2.169 2.28s-2.16-.71-2.16-2.28V5.421h-2.814v5.248c0 3.42 2.835 4.762 4.98 4.762 2.149 0 4.973-1.342 4.973-4.761V5.42h-2.814zm7.498 16.173c0 1.093.583 2.177 2.43 2.177 1.694 0 1.939-.996 1.939-.996h3.175s-.297 3.203-5.11 3.203c-3.357 0-5.47-1.848-5.47-5.149 0-3.29 2.113-5.128 5.429-5.128 3.284 0 5.386 1.838 5.386 5.128 0 .37-.053.765-.053.765zm.041-1.735h4.662c0-.79-.47-1.935-2.315-1.935-1.81 0-2.347 1.14-2.347 1.935m23.701 1.735c0 1.093.584 2.177 2.43 2.177 1.694 0 1.939-.996 1.939-.996h3.175s-.297 3.203-5.11 3.203c-3.357 0-5.469-1.848-5.469-5.149 0-3.29 2.112-5.128 5.428-5.128 3.284 0 5.386 1.838 5.386 5.128 0 .37-.052.765-.052.765zm.041-1.735h4.661c0-.79-.469-1.935-2.315-1.935-1.803 0-2.346 1.14-2.346 1.935m-28.413-.986c0-2.156-1.632-3.25-4.917-3.245-2.263 0-4.896.611-4.896 2.993 0 1.263.767 2.259 1.888 2.598 1.163.349 2.325.523 3.52.61.661.052 1.897.242 1.897.965-.01.673-.777 1.006-2.283 1.006-1.57 0-2.248-.338-2.248-1.242v-.303h-2.972v.303c0 2.238 1.726 3.352 5.214 3.352 3.499.01 5.266-1.042 5.266-3.141
+    [4/10/2026 5:03 PM] Исроилжон: 0-1.
+    [4/10/2026 5:03 PM] Исроилжон: .266-1.042 5.266-3.14
+    [4/10/2026 5:03 PM] Исроилжон: 1
+    [4/10/2026 5:03 PM] Исроилжон: 0-1.587-1.152-2.552-2.58-2.829-1.388-.282-2.827-.313-3.979-.61-.5-.134-.756-.406-.756-.688 0-.601.61-.904 1.867-.904 1.235 0 2.013.17 2.013 1.134zm56.905 0c0-2.156-1.632-3.25-4.917-3.245-2.263 0-4.896.611-4.896 2.993 0 1.263.767 2.259 1.888 2.598 1.162.349 2.325.523 3.519.61.662.052 1.898.242 1.898.965-.011.673-.777 1.006-2.284 1.006-1.569 0-2.247-.338-2.247-1.242v-.303h-2.966v.303c0 2.238 1.725 3.352 5.213 3.352 3.499.01 5.266-1.042 5.266-3.141 0-1.587-1.152-2.552-2.581-2.829-1.386-.282-2.825-.313-3.978-.61-.5-.129-.756-.401-.756-.683 0-.6.61-.904 1.867-.904 1.236 0 2.012.17 2.012 1.135h2.962zm-18.798.312v6.504h2.888v-4.363c0-1.679 1.246-2.762 2.815-2.762h1.888v-2.941h-1.418c-1.747 0-3.009 1.463-3.285 2.32v-2.12h-2.889zM73.498 17.12h-2.889v13.721h2.889zm5.668 0h-2.889v13.721h2.889z">
+                            </path>
+                        </svg>
+    
+                    </div>
+                </a>
+
+                <div class="w-[461px] h-[32px] flex justify-between ">
+
+                    <button
+                        class=" df pt-[6px] pb-[6px] pl-[10px] pr-[10px]  text-[white] text-[14px] font-[500] rounded-[8px] bg-[#636368] bg-[linear-gradient(163deg,_rgba(99,99,104,1)_50%,_rgba(105,106,110,1)_50%)]">
+
+                        Sotuvchi yo'riqnomasi
+
+                    </button>
+
+                    <button
+                        class=" df pt-[6px] pb-[6px] pl-[10px] pr-[10px] text-[white] flex items-center text-[14px] font-[500]  rounded-[8px] bg-[#636368] bg-[linear-gradient(163deg,_rgba(99,99,104,1)_70%,_rgba(105,106,110,1)_70%)] ">
+
+                        <div class="w-[55px] h-[18px] flex items-center justify-between">
+
+                            <div class="w-[16px] h-[16px]">
+
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M21.5422 15C20.2679 19.0571 16.4776 22 12 22C7.52232     22 3.73203 19.0571 2.45776 15H21.5422Z"
+                                        fill="#1EB53A"></path>
+                                    <path
+                                        d="M21.5422 9H2.45776C3.73203 4.94289 7.52232 2 12 2C16.4776 2 20. 2679 4.94289 21.5422 9Z"
+                                        fill="#0099B5"></path>
+                                    <path
+                                        d="M21.1679 8C21.3097 8.32471 21.4349 8.6584 21.5422 9H2.45776C2.56505 8.6584 2. 69018 8.32471 2.83205 8H21.1679Z"
+                                        fill="#CE1126"></path>
+                                    <path
+                                        d="M21.1679 16C21.3097 15.6753 21.4349 15.3416 21.5422 15H2.45776C2.56505 15.3416 2.69018 15.6753 2.83205 16H21.1679Z"
+                                        fill="#CE1126"></path>
+                                    <path
+                                        d="M21.3704 15.5C21.7775 14.4107 22 13.2313 22 12C22 10.7687 21.7775 9.58934 21.3704 8.5H2.62961C2.22255 9.58934 2 10.7687 2 12C2 13.2313 2.22255 14.4107 2.62961 15.5H21.3704Z"
+                                        fill="#F7F9FC"></path>
+                                </svg>
+
+                            </div>
+
+                            UZ
+
+                            <i class="fa-solid fa-chevron-down text-[10px]"></i>
+
+                        </div>
+
+                    </button>
+
+                    <button
+                        class="df pt-[6px] pb-[6px] pl-[10px] pr-[10px]  text-[white] text-[14px] font-[500] rounded-[8px]  bg-[#636368] bg-[linear-gradient(150deg,_rgba(99,99,104,1)_30%,_rgba(105,106,110,1)_30%)]">
+
+                        Kirish
+
+                    </button>
+
+                    <button
+                        class="df pt-[6px] pb-[6px] pl-[10px] pr-[10px] bg-[white] text-[black] text-[14px] font-[500]  rounded-[8px]">
+
+                        Sotuvchi bo'lish
+
+                    </button>
+
+                </div>
+
+            </nav>
+
+        </header>
+
+        <!-- BIRINCHI SECTION -->
+
+        <section class="w-[100%] h-[877px] df pt-[80px] pb-[370px] bg-[#1f2026] relative">
+
+            <div class="w-[1190px] h-[427px] flex bg-[#1f2026]">
+
+                <div class="w-[776px] h-[796px] absolute z-[2] bg-[#1f2026]">
+                    <div class="w-[776px] h-[428px]  bg-[#1f2026]">
+
+                        <h1 class="text-[36px] font-[700] leading-tight text-[white]">
+
+                            Uzum Marketda butun <br> Oʻzbekiston boʻylab soting!
+
+                        </h1>
+                        [4/10/2026 5:03 PM] Исроилжон: <p class="text-[20px] text-[white] mt-[16px] ">
+
+                            Minglab sotuvchilar allaqachon biz bilan. Qoʻshiling va butun <br> mamlakat boʻylab
+                            millionlab mijozlarga soting
+
+                        </p>
+
+                        <div class="w-[605px] h-[90px] mt-[48px] flex items.center justify-between">
+
+                            <div>
+
+                                <h2 class="text-[28px] text-[white]">
+
+                                    10 million
+
+                                </h2>
+
+                                <p class="teext-[14px] text-[#ffffffb3]">
+
+                                    xaridor Uzum <br> Marketda roʻyxatdan <br> oʻtgan
+
+                                </p>
+
+                            </div>
+
+                            <div>
+
+                                <h2 class="text-[28px] text-[white]">
+
+                                    X23 oʻsish
+
+                                </h2>
+
+                                <p class="teext-[14px] text-[#ffffffb3]">
+
+                                    marketpleysdagi savdo <br> oʻtgan yil davomida
+
+                                </p>
+
+                            </div>
+
+                            <div>
+
+                                <h2 class="text-[28px] text-[white]">
+
+                                    14 kun
+
+                                </h2>
+
+                                <p class="teext-[14px] text-[#ffffffb3]">
+
+                                    Roʻyxatdan oʻtgandan soʻng <br> birinchi daromadning o'rtacha <br> vaqti
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <button class="w-[220px] h-[60px] bg-[white] rounded-[15px] text-[black] mt-[65px]">
+
+                            Sotuvchi bo'lish
+
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <img class="w-[970px] h-[790px] rounded-[15px] absolute right-[1px] bottom-[1px]"
+                src="https://seller.uzum.uz/_nuxt/first-uz.RJHhsVWQ.png" alt="">
+
+        </section>
+
+        <!-- IKKINCHI_SECTION -->
+
+
+
+        <!-- UCHUNCHI_SECTION -->
+
+
+
+
+        <div class="flex justify-center pt-[315px]">
+            <img class="w-[429px] h-[500px] rounded-[10px] object-cover mr-[350px]"
+                src="https://seller.uzum.uz/_nuxt/second.B3RCPCpy.png" alt="">
+            <div class="w-[428px] h-[420px] pt-[33px]">
+                <h1 class="text-[36px] font-[700] leading-[44px] w-[400px] h-[173px]">Nimadan boshlash va biznesni
+                    qanday qilib samaraliroq qilish kerak</h1>
+                <p class="text-[18px] leading-[28px] font-[500 w-[400px] h-[134px] mt-[20px] mb-[50px]">Uzum Academy
+                    yordam beradi! Top sotuvchilardan tajribali ma’ruzachilar va Uzum ekspertlari, real holatlar, biznes
+                    jamiyat va juda koʻp foydali bilimlar — biznesingiz rivojlanishiga yordam beradigan hamma narsa</p>
+                <button class="w-[208.67px] h-[48px] bg-[#1f2026] rounded-[10px]"><span
+                        class="text-[16px] font-[500] text-[#fff]">Batafsil ma’lumot olish</span></button>
+            </div>
+        </div>
+        <div class="flex justify-between pt-[172px] ml-[350px] mb-[160px]">
+            <div></div>
+            <div class="w-[428px] h-[276px] mt-[150px]">
+                <h1 class="text-[36px] text-[#1f2026] leading-[44px] font-[700] w-[300px] h-[87px]">Istalgan joydan
+                    ishlang</h1>
+                <p class="text-[18px] w-[380px] h-[78px] mt-[23px] mb-[30px]">Biznesingizni masofadan boshqaring —
+                    sotuvchilar uchun qulay veb-sayt yoki mobil ilova orqali</p>
+                <button class="w-[159px] h-[48px] bg-[#7000ff] rounded-[10px]"><span
+                        class="text-[16px] font-[500] text-[#fff]">Sotuvchi boʻlish</span></button>
+            </div>
+            <div class="flex ml-[175px]">
+                <img class="w-[237px] h-[481px] relative left-[35px] top-[95px]"
+                    src="https://seller.uzum.uz/_nuxt/iphone-uz.BUK7saXJ.png" alt="">
+                <img class="w-[1043px] h-[616px] z-0" src="https://seller.uzum.uz/_nuxt/laptop-uz.UTMAuBIY.png" alt="">
+            </div>
+        </div>
+        <div class="bg-[#f0f2f5] pt-[50px]">
+            <h1 class="text-[36px] text-[#7f4dff] font-[700] text-center">hamkorlar</h1>
+            <div class="flex m-auto w-[983px] h-[43px] relative left-[150px]">
+                <h1 class="text-[36px] font-[700] text-[#1f2026]">Biz haqimizda sotuvchilar nima deyishadi</h1><svg
+                    xmlns="http://www.w3.org/2000/svg" width="208" height="38" fill="none" viewBox="0 0 228 38"
+                    class="relative left-[-450px] top-[10px] img-crossed-uz" data-v-eae1c8b6="">
+                    <path stroke="#7F4DFF" stroke-width="3"
+                        d="M1 19q30.672-15.051 16.143 0Q2.54 34.204 33.286 19q30.67-15.204 16.143 0-23.51 34 16.142 0 30.672-34 16.143 0-11.076 17.841 16.143 0Q128.53 1.159 114 19q-20.673 32.931 16.143 0 30.67-32.931 16.143 0-11.538 19.368 16.143 0 30.67-19.368 16.142 0-8.969 4.545 16.143 0 30.672-4.545 16.143 0Q162.693 44.596 227 19">
+                    </path>
+                </svg>
+            </div>
+            <div class="flex justify-center mt-[20px] mb-[25px]">
+                <div class="w-[380px] h-[273px] rounded-[20px] bg-[#fff] pt-[20px] pl-[15px]">
+                    <div class="flex"><img class="w-[64px] h-[64px] rounded-[50%]"
+                            src="https://seller.uzum.uz/_nuxt/avatar_andrey.DtNA_lgO.jpg" alt="">
+                        <div class="ml-[20px]">
+                            <p class="text-[18px] leading-[22px] font-[600]">Andrey Malaxov</p>
+                            <p class="text-[text-[14px] text-[#8b8e99]">Selfie brendining tijorat direktori</p>
+                        </div>
+                    </div>
+                    <div class="w-[340px] h-[0.30px] bg-[#8b8e99] mt-[20px]"></div>
+                    <p class="w-[320px] mt-[20px] h-[132px] text-[16px] text-[#1f2026] leading-[22px] font-[400]">Biz
+                        muntazam ravishda marketpleys aksiyalarida qatnashamiz, natijada darhol sotuvlar oʻsishini
+                        koʻramiz. Mijozlarning so‘rovlari va sharhlariga tezkor javob berish uchun Uzum Sellers
+                        ilovasidan ham faol foydalanamiz</p>
+                </div>
+                <div class="w-[380px] h-[273px] rounded-[20px] bg-[#fff] pt-[20px] pl-[15px] mr-[25px] ml-[25px]">
+                    <div class="flex"><img class="w-[64px] h-[64px] rounded-[50%]"
+                            src="https://seller.uzum.uz/_nuxt/avatar_artur.DuWOyTH5.jpg" alt="">
+                        <div class="ml-[20px]">
+                            <p class="text-[18px] leading-[22px] font-[600]">Artur Kim</p>
+                            <p class="text-[text-[14px] text-[#8b8e99]">Uzum Marketda Texnomart do‘konlar tarmog‘i
+                                menejeri</p>
+                        </div>
+                    </div>
+                    <div class="w-[340px] h-[0.30px] bg-[#8b8e99] mt-[20px]"></div>
+                    <p
+                        class="w-[320px] mt-[20px] h-[132px] text-[16px]-[132px] text-[16px] text-[#1f2026] leading-[22px] font-[400]">
+                        Biz Uzum Sellers ilovasidan faol foydalanamiz: uning intuitiv interfeysi tufayli tovar
+                        jo‘natishni rejalashtirish va savdo statistikasini o‘rganish qulay. Va, albatta, Uzum Market
+                        savdolarida muntazam qatnashamiz.</p>
+                </div>
+                <div class="w-[380px] h-[273px] rounded-[20px] bg-[#fff] pt-[20px] pl-[15px]">
+                    <div class="flex"><img class="w-[64px] h-[64px] rounded-[50%]"
+                            src="  https://seller.uzum.uz/_nuxt/avatar_ozod.CKdzBumu.jpg" alt="">
+                        <div class="ml-[20px]">
+                            <p class="text-[18px] leading-[22px] font-[600]">Ozod Hasanov</p>
+                            <p class="text-[text-[14px] text-[#8b8e99]">Uzum Marketdagi LP Kid’s do‘konining sherik
+                                egasi</p>
+                        </div>
+                    </div>
+                    <div class="w-[340px] h-[0.30px] bg-[#8b8e99] mt-[20px]"></div>
+                    <p class="w-[320px] mt-[20px] h-[132px] text-[16px] text-[#1f2026] leading-[22px] font-[400]">
+                        Tadbirkorlik yo‘limning boshida Uzum Academy’da tahsil oldim. Va bu toʻgʻri qaror edi. Uzum
+                        xodimlari ichki jarayonlar haqida, top-sotuvchilar esa — savdoning nozik jihatlari va ular
+                        qo‘llaydigan usullar haqida gapirib berishdi.</p>
+                </div>
+            </div>
+            <div class="flex justify-center ">
+                <div class="w-[380px] h-[229px] rounded-[20px] bg-[#fff] pt-[20px] pl-[15px]">
+                    <div class="flex"><img class="w-[64px] h-[64px] rounded-[50%]"
+                            src="  https://seller.uzum.uz/_nuxt/avatar_shah.BTzO2iYC.jpg" alt="">
+                        <div class="ml-[20px]">
+                            <p class="text-[18px] leading-[22px] font-[600]">Shaxzod Xoʻjaev</p>
+                            <p class="text-[text-[14px] text-[#8b8e99]">Terra Pro tarmogʻining elektron tijorat
+                                yoʻnalishi boshligʻi</p>
+                        </div>
+                    </div>
+                    <div class="w-[340px] h-[0.30px] bg-[#8b8e99] mt-[20px]"></div>
+                    <p class="w-[320px] mt-[20px] h-[132px] text-[16px] text-[#1f2026] leading-[22px] font-[400]">Yangi
+                        mijozlarni jalb qilish uchun biz aksiya va savdolarda faol ishtirok etamiz. Sotuvchilar uchun
+                        ilova esa sotuvlarimiz holatini tezkor kuzatishga yordam beradi.</p>
+                </div>
+                <div class="w-[380px] h-[273px] rounded-[20px] bg-[#fff] pt-[20px] pl-[15px] mr-[25px] ml-[25px]">
+                    <div class="flex"><img class="w-[64px] h-[64px] rounded-[50%]"
+                            src="https://seller.uzum.uz/_nuxt/avatar_abbos.Djo4PcMy.jpg" alt="">
+                        <div class="ml-[20px]">
+                            <p class="text-[18px] leading-[22px] font-[600]">Abbos Xalmuratov</p>
+                            <p class="text-[text-[14px] text-[#8b8e99]">Topar.uz doʻkonining sherik egasi</p>
+                        </div>
+                    </div>
+                    <div class="w-[340px] h-[0.30px] bg-[#8b8e99] mt-[20px]"></div>
+                    <p class="w-[320px] mt-[20px] h-[132px] text-[16px] text-[#1f2026] leading-[22px] font-[400]">
+                        Oxirgi uch oy ichida sotuvlar oydan oyga oʻrtacha 20% ga oshishini kuzatmoqdamiz. Endi biz
+                        auditoriyani kengaytirish va sotuv oʻsish sur’atlarini saqlab qolish uchun marketpleys
+                        aksiyalarida faolroq ishtirok etishni rejalashtiryapmiz</p>
+                </div>
+                <div class="w-[380px] h-[249px] rounded-[20px] bg-[#fff] pt-[20px] pl-[15px] mb-[120px]">
+                    <div class="flex">
+                        <div class="w-[64px] h-[64px] rounded-[50%] bg-[#f0f2f5]"><svg
+                                xmlns="http://www.w3.org/2000/svg" class="ml-[15px] mt-[15px]" fill="currentColor"
+                                viewBox="0 0 24 24" width="32" height="32" style="color:#b4b7bf;" data-v-b8cecddc="">
+                                <path fill-rule="evenodd"
+                                    d="M8.786 14.5h6.428c.727 0 1.222 0 1.654.076a5 5 0 0 1 4.056 4.056c.076.432.076.927.076 1.654 0 .158.005.318-.023.474a1.5 1.5 0 0 1-1.217 1.217c-.136.024-.28.023-.35.023Q12 21.961 4.59 22c-.07 0-.214.001-.35-.023a1.5 1.5 0 0 1-1.217-1.216c-.028-.157-.023-.317-.023-.475 0-.727 0-1.222.076-1.654a5 5 0 0 1 4.056-4.056c.432-.076.927-.076 1.654-.076M6.5 7.5a5.5 5.5 0 1 1 11 0 5.5 5.5 0 0 1-11 0"
+                                    clip-rule="evenodd"></path>
+                            </svg></div>
+                        <div class="ml-[20px]">
+                            <p class="text-[18px] leading-[22px] font-[600]">Sizning hikoyangiz</p>
+                            <p class="text-[text-[14px] text-[#8b8e99]">Hozir boshlanadi</p>
+                        </div>
+                    </div>
+                    <div class="w-[340px] h-[0.30px] bg-[#8b8e99] mt-[20px]"></div>
+                    <p class="w-[320px] mt-[20px] h-[132px] text-[16px] text-[#1f2026] leading-[22px] font-[400]">
+                        Ertaga eng zoʻri boʻlish uchun bugun Uzum Marketga qoʻshiling</p><button
+                        class="w-[340px] h-[48px] bg-[#7000ff] rounded-[10px] relative top-[-73px]"><span
+                            class="text-[16px] text-[#fff] font-[500]">Sotuvchiboʻlish</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+
+        <h2 class=" text-[36px] mb-[20px] mt-[25px]  font-[600]">Tez-tez beriladigan savollar</h2>
+        <div
+            class="w-[1190px] m-auto flex items-center justify-center flex-col h-[585px] bg-[#F0F2F5] mb-[25px] rounded-[10px] p-[30px]">
+
+            <div class="w-[1044px] h-[59px] flex items-center justify-between m-auto text-[20px] font-[500]">
+                <h1>Ro'yxatdan otish uchun qanday xujjatlar ochish kerak?</h1>
+                <i class="bi bi-chevron-down"></i>
+            </div>
+            <hr class="w-[1044px] h-[0.8px] m-auto text-[#CBCDD1]  ">
+
+
+            <div class="w-[1044px] h-[59px] flex items-center justify-between m-auto text-[20px] font-[500]">
+                <h1>Uzum Marketda komissia qancha?</h1>
+                <i class="bi bi-chevron-down"></i>
+            </div>
+            <hr class="w-[1044px] h-[0.8px] m-auto text-[#CBCDD1]  ">
+
+
+
+            <div class="w-[1044px] h-[59px] flex items-center justify-between m-auto text-[20px] font-[500]">
+                <h1>Tovarlarni omborga topshirish kerakmi?</h1>
+                <i class="bi bi-chevron-down"></i>
+            </div>
+            <hr class="w-[1044px] h-[0.8px] m-auto text-[#CBCDD1]  ">
+
+
+
+            <div class="w-[1044px] h-[59px] flex items-center justify-between m-auto text-[20px] font-[500]">
+                <h1>Uzum Marketda qanday qilib komissioner sifatida kirish mumkin?</h1>
+                <i class="bi bi-chevron-down"></i>
+            </div>
+            <hr class="w-[1044px] h-[0.8px] m-auto text-[#CBCDD1]  ">
+
+
+            <div class="w-[1044px] h-[59px] flex items-center justify-between m-auto text-[20px] font-[500]">
+                <h1>Komissiyoner belgisi yoqligi sabablikartochkalar bloklanishininima qilish kerak?</h1>
+                <i class="bi bi-chevron-down"></i>
+            </div>
+            <hr class="w-[1044px] h-[0.8px] m-auto text-[#CBCDD1]  ">
+
+
+
+            <div class="w-[1044px] h-[59px] flex items-center justify-between m-auto text-[20px] font-[500]">
+                <h1>Shartnoma sanasini qayerda korish mumkin?</h1>
+                <i class="bi bi-chevron-down"></i>
+            </div>
+            <hr class="w-[1044px] h-[0.8px] m-auto text-[#CBCDD1]  ">
+
+
+
+            <div class="w-[1044px] h-[59px] flex items-center justify-between m-auto text-[20px] font-[500]">
+                <h1>Uzum Market ombori qayerda joylashgan?</h1>
+                <i class="bi bi-chevron-down"></i>
+            </div>
+            <hr class="w-[1044px] h-[0.8px] m-auto text-[#CBCDD1]  ">
+
+
+
+            <div class="w-[1044px] h-[59px] flex items-center justify-between m-auto text-[20px] font-[500]">
+                <h1>18+ tovarlarni sotish mumkinmi?</h1>
+                <i class="bi bi-chevron-down"></i>
+            </div>
+            <hr class="w-[1044px]  m-auto text-[#CBCDD1]  ">
+        </div>
+
+
+
+        <div class="flex items-center gap-[15px] mb-[25px] mt-[50px]">
+            <h1 class="text-[36px] font-[500] mr-[80px]">Savollarga javob beramiz</h1>
+            <div class="w-[48px] h-[48px] rounded-full bg-[#E6E8ED] flex items-center justify-center"><i
+                    class="bi bi-chevron-left text-[25px]"></i></div>
+            <div class="w-[48px] h-[48px] rounded-full bg-[#E6E8ED] flex items-center justify-center"><i
+                    class="bi bi-chevron-right text-[25px]"></i></div> <br>
+
+
+        </div>
+
+        <div class="flex items-center gap-[15px] mb-[25px]">
+            <img class="w-[641px] rounded-[10px]" src="/static/img/Снимок экрана 2026-04-06 161100.png" alt="">
+            <img class="w-[641px] rounded-[10px]" src="/static/img/Снимок экрана 2026-04-06 161212.png" alt="">
+
+        </div>
+
+    </div>
+
+
+    <div class="bg-[#1F2026]">
+        <div class="w-[1100px] p-[30px] m-auto pt-[100px]">
+            <h1 class="font-bold text-[white] text-[30px]">Uzum — faqatgina marketpleys emas</h1>
+            <h5 class="text-[18px] mt-[15px] text-white">Qulay hayot va samarali biznes uchun xizmatlarning butun <br>
+                ekotizimini yaratmoqdamiz</h5>
+
+            <div class="flex gap-[20px] mt-[30px]">
+                <div class="w-[800px] rounded-[20px] bg-[#36373C] p-[50px]">
+                    <h2 class="text-[23px] text-white font-bold">Muddatli toʻlov</h2>
+                    <div class="flex gap-[25px]">
+                        <div>
+                            <img class="mt-[30px]" src="https://seller.uzum.uz/_nuxt/nasiya.N0ph2TWp.png" alt=""
+                                width="100" height="100">
+                            <h4 class="text-white font-900 mt-[20px] text-[20px]">Uzum Nasiya</h4>
+                            <p class="text-white text-[15px] text-[#C3C3BC]">Har qanday xaridlar uchun qulay va adolatli
+                                nasiya</p>
+                        </div>
+                        <div>
+                            <img class="mt-[30px]" src="https://seller.uzum.uz/_nuxt/nasiya-business.BtOXt0Q_.png"
+                                alt="" width="100" height="100">
+                            <h4 class="text-white font-900 mt-[20px] text-[20px]">Uzum Nasiya</h4>
+                            <p class="text-white text-[15px] text-[#C3C3BC]">Biznesingizda nasiya to'lov usuli sifatida
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-[800px] rounded-[20px] bg-[#36373C] p-[50px]">
+                    <h2 class="text-[23px] text-white font-bold">Muddatli toʻlov</h2>
+                    <div class="flex gap-[25px]">
+                        <div>
+                            <img class="mt-[30px]" src="https://seller.uzum.uz/_nuxt/nasiya.N0ph2TWp.png" alt=""
+                                width="100" height="100">
+                            <h4 class="text-white font-900 mt-[20px] text-[20px]">Uzum Nasiya</h4>
+                            <p class="text-white text-[15px] text-[#C3C3BC]">Biznesingizda nasiya to'lov usuli sifatida
+                            </p>
+                        </div>
+                        <div>
+                            <img class="mt-[30px]" src="https://seller.uzum.uz/_nuxt/nasiya-business.BtOXt0Q_.png"
+                                alt="" width="100" height="100">
+                            <h4 class="text-white font-bold mt-[20px] text-[20px]">Uzum Nasiya</h4>
+                            <p class="text-white text-[15px] text-[#C3C3BC]">Har qanday xaridlar uchun qulay va adolatli
+                                nasiya</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-[20px] mt-[30px]">
+                <div class="w-[800px] rounded-[20px] bg-[#36373C] p-[50px]">
+                    <h2 class="text-[30px] text-white font-bold">Biznes</h2>
+
+                    <div>
+                        <img class="mt-[30px]" src="https://seller.uzum.uz/_nuxt/business.Dm3toxbu.png" alt=""
+                            width="100" height="100">
+                        <h4 class="text-white font-bold mt-[20px] text-[20px]">Uzum Business</h4>
+                        <p class="text-white text-[15px] text-[#C3C3BC]">Biznesni boshqarish xizmati</p>
+                    </div>
+
+
+                </div>
+
+
+                <div class="w-[800px] rounded-[20px] bg-[#36373C] p-[50px]">
+                    <h2 class="text-[30px] text-white font-bold">Yetkazib berish</h2>
+
+                    <div>
+                        <img class="mt-[30px]" src="https://seller.uzum.uz/_nuxt/nasiya.N0ph2TWp.png" alt="" width="100"
+                            height="100">
+                        <h4 class="text-white font-bold mt-[20px] text-[20px]">Uzum Tezkor</h4>
+                        <p class="w-[290px] text-white text-[15px] text-[#C3C3BC]">Kafe, restoran va do'konlardan
+                            ovqatlarni tez yetkazib berish</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="bg-[#36373C]  rounded-[20px] p-[50px] mt-[30px]">
+                <h1 class="text-white font-bold text-[25px]">Biz yangi xizmatni tayyorlayapmiz!</h1>
+                <h4 class="text-white text-[17px]">Yangiliklarni kuzatib boring..</h4>
+            </div>
+
+            <div class="mt-[100px] gap-[10px]  flex">
+                <div>
+                    <h3 class="text-white font-bold mb-[20px] text-[20px]">Sotuvchilar uchun</h3>
+                    <a class=" font-bold text-[#8B8E99]  text-[15px]   pp" href="#">Sotuvchi yoʻriqnomasi</a> <br>
+                    <a class=" font-bold text-[#8B8E99]  text-[15px]  pp" href="#">Ro'yxatdan o'tish yoʻriqnomasi</a>
+                    <br>
+                    <a class=" font-bold text-[#8B8E99]  text-[15px]  pp" href="#">Yangi hamkorlarni
+                        qo'llab-quvvatlash</a> <br>
+
+                </div>
+
+                <div>
+                    <h3 class="text-white font-bold text-[20px]">Kompaniya</h3>
+                    <p class=" font-bold text-[#8B8E99] text-[15px] mt-[20px]  pp">Bo'sh ish o'rinlari</p>
+                    <p class=" font-bold text-[#8B8E99] text-[15px] mt-[10px] pp">Ommaviy taklif</p>
+                    <p class=" font-bold text-[#8B8E99] text-[15px] mt-[10px] pp">Maxfiylik haqida nizom</p>
+                    <p class=" font-bold text-[#8B8E99] text-[15px] mt-[10px] pp">Shaxsiy ma'lumotlarni qayta ishlash
+                        bo'yicha nizom</p>
+                </div>
+
+
+                <div>
+                    <h2 class="text-white font-bold text-[18px]">Uzum Seller ijtimoiy tarmoqlarda</h2>
+                    <div class="flex gap-[20px] mt-[20px]">
+                        <div class="bg-[white] w-[50px] h-[50px] rounded-[50%]">
+                            <i class="fa-brands fa-instagram  text-[35px] mt-[8px] ml-[4px] "></i>
+                        </div>
+                        <div class="bg-[white] w-[50px] h-[50px] rounded-[50%]">
+                            <i class="fa-brands fa-youtube  text-[35px] mt-[8px] ml-[4px] "></i>
+                        </div>
+                        <div class="bg-[white] w-[50px] h-[50px] rounded-[50%]">
+                            <i class="fa-brands fa-telegram  text-[35px] mt-[8px] ml-[4px] "></i>
+                        </div>
+                    </div>
+                    <h2 class="text-white font-bold text-[18px] mt-[40px]">Uzum Sellers sotuvchilari uchun mobil ilova
+                    </h2>
+                    <div class="flex gap-[20px] mt-[20px]">
+                        <div class="bg-[white] w-[50px] h-[50px] rounded-[15px]">
+                            <svg class="ml-[16px] " xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="80"
+                                height="50" viewBox="0 0 511.999 511.999" style="width:22px;" data-v-0133bbc5="">
+                                <path
+                                    d="M382.369 175.623A775952 775952 0 0 1 79.355 6.028C69.372-.565 57.886-1.429 47.962 1.93l254.05 254.05z"
+                                    style="fill:#32bbff;"></path>
+                                <path
+                                    d="M47.962 1.93c-1.86.63-3.67 1.39-5.401 2.308C31.602 10.166 23.549 21.573 23.549 36v439.96c0 14.427 8.052 25.834 19.012 31.761a37 37 0 0 0 5.395 2.314L302.012 255.98z"
+                                    style="fill:#32bbff;"></path>
+                                <path
+                                    d="M302.012 255.98 47.956 510.035c9.927 3.384 21.413 2.586 31.399-4.103 143.598-80.41 237.986-133.196 298.152-166.746l4.938-2.772z"
+                                    style="fill:#32bbff;"></path>
+                                <path
+                                    d="M23.549 255.98v219.98c0 14.427 8.052 25.834 19.012 31.761a37 37 0 0 0 5.395 2.314L302.012 255.98z"
+                                    style="fill:#2c9fd9;"></path>
+                                <path
+                                    d="M79.355 6.028C67.5-1.8 53.52-1.577 42.561 4.239l255.595 255.596 84.212-84.212A786009 786009 0 0 1 79.355 6.028"
+                                    style="fill:#29cc5e;"></path>
+                                <path
+                                    d="M298.158 252.126 42.561 507.721c10.96 5.815 24.939 6.151 36.794-1.789 143.598-80.41 237.986-133.196 298.152-166.746l4.938-2.772z"
+                                    style="fill:#d93f21;"></path>
+                                <path
+                                    d="M488.45 255.98c0-12.19-6.151-24.492-18.342-31.314 0 0-22.799-12.721-92.682-51.809l-83.123 83.123 83.204 83.205c69.116-38.807 92.6-51.892 92.6-51.892 12.192-6.821 18.343-19.123 18.343-31.313"
+                                    style="fill:#ffd500;"></path>
+                                <path
+                                    d="M470.108 287.294c12.191-6.822 18.342-19.124 18.342-31.314H294.303l83.204 83.205c69.117-38.806 92.601-51.891 92.601-51.891"
+                                    style="fill:#fa0;"></path>
+                            </svg>
+                        </div>
+                        <div class="bg-[white] w-[50px] h-[50px] rounded-[15px]">
+                            <i class="fa-brands fa-apple  text-[35px] mt-[8px] ml-[4px] "></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

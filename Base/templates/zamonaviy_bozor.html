@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 24px;
+        }
+
+        swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        swiper-slide {
+            text-align: center;
+            font-size: 18px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        swiper-slide img {
+            display: block;
+            /* width: 193px;
+            height: 72px; */
+            gap: 22px;
+
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="w-[1351px] m-auto">
+        <nav
+            class="w-[1272px] h-[48px] mt-[12px] mb-[12px] ml-[39px] mr-[39px] pl-[16px] pr-[16px] flex items-center justify-between">
+            <img src="https://uzum.uz/landings/img/uzum-logo-desktop.svg" alt="">
+            <div class="w-[340px] h-[48px] flex item-center gap-[18px] ">
+               
+                                  
+                <a href="https://t.me/uzum_new_bot" target="_blank"
+                    class="w-[155px] h-[48px] pt-[8px] pb-[8px] pl-[12px] pr-[12px] hover:bg-[#D8D8DA] flex items-center border-[1px] cursor-pointer border-[#D8D8DA] rounded-[10px]">
+
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M2.36937 11.332C7.73698 8.94042 11.3103 7.3513 13.1046 6.58035C18.2115 4.39335 19.285 4.01573 19.9751 4C20.1285 4 20.4659 4.03147 20.6959 4.22027C20.8799 4.37761 20.926 4.58215 20.9566 4.73949C20.9873 4.89683 21.018 5.22724 20.9873 5.47898C20.7112 8.46841 19.515 15.7217 18.9016 19.0573C18.6409 20.4733 18.1348 20.9453 17.644 20.9925C16.5705 21.0869 15.7577 20.2688 14.7302 19.5765C13.1046 18.4908 12.1998 17.8143 10.6201 16.7444C8.79516 15.5172 9.97604 14.8406 11.0189 13.7392C11.2949 13.456 16.0031 9.05056 16.0951 8.65721C16.1104 8.61001 16.1104 8.4212 16.0031 8.3268C15.8957 8.2324 15.7424 8.26387 15.6197 8.29533C15.451 8.3268 12.8745 10.089 7.85967 13.5662C7.12354 14.0854 6.46409 14.3371 5.86598 14.3214C5.20654 14.3057 3.94898 13.9438 2.99815 13.6291C1.84795 13.2515 0.927788 13.0469 1.00447 12.3861C1.05048 12.04 1.51056 11.6938 2.36937 11.332Z"
+                                fill="#1F2026"></path>
+                        </g>
+                    </svg>
+
+                    <span class="ml-[8px] text-[#1f2026]">Savol berish</span>
+
+                </a>
+                </button>
+                        <div class="relative bottom-[0px] right-[0px] fixed z-[998]">
+
+                    <!-- Tugma -->
+                    <button id="topBtn" onclick="scrollToTop()"
+                        class="fixed bottom-5 right-5 text-white w-[52px] h-[52px] cursor-pointer text-[#fff] bg-[#7000FF] text-center rounded-full">
+                        <i class="fa-solid fa-angle-up text-[25px] font-[300]"></i>
+                    </button>
+
+                </div>
+
+                <div class="relative inline-block z-[999]">
+                    <button onclick="toggleDropdown()"
+                        class="w-[167px] h-[48px] flex items-center px-[12px] bg-[#e6e8ed] rounded-[10px] cursor-pointer">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="w-[24px] h-[24px] btn-lang__locale-icon" data-v-5573d1df="">
+                            <path
+                                d="M21.5422 15C20.2679 19.0571 16.4776 22 12 22C7.52232 22 3.73203 19.0571 2.45776 15H21.5422Z"
+                                fill="#1EB53A"></path>
+                            <path
+                                d="M21.5422 9H2.45776C3.73203 4.94289 7.52232 2 12 2C16.4776 2 20.2679 4.94289 21.5422 9Z"
+                                fill="#0099B5"></path>
+                            <path
+                                d="M21.1679 8C21.3097 8.32471 21.4349 8.6584 21.5422 9H2.45776C2.56505 8.6584 2.69018 8.32471 2.83205 8H21.1679Z"
+                                fill="#CE1126"></path>
+                            <path
+                                d="M21.1679 16C21.3097 15.6753 21.4349 15.3416 21.5422 15H2.45776C2.56505 15.3416 2.69018 15.6753 2.83205 16H21.1679Z"
+                                fill="#CE1126"></path>
+                            <path
+                                d="M21.3704 15.5C21.7775 14.4107 22 13.2313 22 12C22 10.7687 21.7775 9.58934 21.3704 8.5H2.62961C2.22255 9.58934 2 10.7687 2 12C2 13.2313 2.22255 14.4107 2.62961 15.5H21.3704Z"
+                                fill="#F7F9FC"></path>
+                        </svg>
+
+                        <!-- Selected language -->
+                        <span id="selectedLang" class="ml-[8px]">O'zbekcha</span>
+
+                        <!-- Arrow -->
+                        <span class="ml-auto"><i class="fa-solid fa-chevron-down"></i></span>
+                    </button>
+
+                    <!-- Dropdown -->
+                    <div id="dropdown"
+                        class="hidden absolute mt-[5px]  w-[240px] h-[136px] pt-[12px] pb-[12px] pl-[4px] pr-[4px]  left-[-70px] bg-white rounded-[10px] shadow-md">
+                        <h1 class="relative font-[600] text-[#1f2026] text-[18px] pl-[16px] mb-[4px]">Tilni tanlang</h1>
+                        <div onclick="selectLang('O\'zbekcha')"
+                            class="flex items-center gap-[12px] hover:bg-gray-200 rounded-[7px] w-[232px] h-[40px] pt-[8px] pb-[8px] pl-[10px] pr-[10px] cursor-pointer">
+
+                            <div class="pl-[6px] pr-[6px] flex items-center gap-[12px]">
+                                <span><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="w-[24px] h-[24px] btn-lang__locale-icon" data-v-5573d1df="">
+                                        <path
+                                            d="M21.5422 15C20.2679 19.0571 16.4776 22 12 22C7.52232 22 3.73203 19.0571 2.45776 15H21.5422Z"
+                                            fill="#1EB53A"></path>
+                                        <path
+                                            d="M21.5422 9H2.45776C3.73203 4.94289 7.52232 2 12 2C16.4776 2 20.2679 4.94289 21.5422 9Z"
+                                            fill="#0099B5"></path>
+                                        <path
+                                            d="M21.1679 8C21.3097 8.32471 21.4349 8.6584 21.5422 9H2.45776C2.56505 8.6584 2.69018 8.32471 2.83205 8H21.1679Z"
+                                            fill="#CE1126"></path>
+                                        <path
+                                            d="M21.1679 16C21.3097 15.6753 21.4349 15.3416 21.5422 15H2.45776C2.56505 15.3416 2.69018 15.6753 2.83205 16H21.1679Z"
+                                            fill="#CE1126"></path>
+                                        <path
+                                            d="M21.3704 15.5C21.7775 14.4107 22 13.2313 22 12C22 10.7687 21.7775 9.58934 21.3704 8.5H2.62961C2.22255 9.58934 2 10.7687 2 12C2 13.2313 2.22255 14.4107 2.62961 15.5H21.3704Z"
+                                            fill="#F7F9FC"></path>
+                                    </svg></span>
+                                <p>O'zbekcha</p>
+                            </div>
+                        </div>
+
+                        <div onclick="selectLang('Русский')"
+                            class="flex items-center gap-[12px] hover:bg-gray-200 rounded-[7px] w-[232px] h-[40px] pt-[8px] pb-[8px] pl-[10px] pr-[10px] cursor-pointer">
+                            <div class="pl-[6px] pr-[6px] flex items-center gap-[12px]">
+                                <span><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="w-[24px] h-[24px] btn-lang__locale-icon" data-v-5573d1df="">
+                                        <path
+                                            d="M21.5422 15C20.2679 19.0571 16.4776 22 12 22C7.52232 22 3.73203 19.0571 2.45776 15H21.5422Z"
+                                            fill="#D52B1E"></path>
+                                        <path
+                                            d="M21.5422 9H2.45776C3.73203 4.94289 7.52232 2 12 2C16.4776 2 20.2679 4.94289 21.5422 9Z"
+                                            fill="#F7F9FC"></path>
+                                        <path
+                                            d="M21.3704 15.5C21.7775 14.4107 22 13.2313 22 12C22 10.7687 21.7775 9.58934 21.3704 8.5H2.62961C2.22255 9.58934 2 10.7687 2 12C2 13.2313 2.22255 14.4107 2.62961 15.5H21.3704Z"
+                                            fill="#0039A6"></path>
+                                    </svg></span>
+                                <p>Русский</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="w-[1240px] h-[416px] rounded-[24px] m-auto">
+            <swiper-container class="mySwiper" navigation="true" pagination="true" keyboard="true" mousewheel="true"
+                css-mode="true">
+                <swiper-slide><img class="rounded-[24px]" src="https://static.uzum.uz/Landing_Fashion_v2/1main2320uz.jpg"
+                        alt=""></swiper-slide>
+
+                <swiper-slide><img class="rounded-[24px]" src="https://static.uzum.uz/Landing_Fashion_v2/elly605uz.jpg"
+                        alt=""></swiper-slide>
+
+                <swiper-slide><img class="rounded-[24px]" src="https://static.uzum.uz/Landing_Fashion_v2/terrapro605uz.jpg"
+                        alt=""></swiper-slide>
+
+            </swiper-container>
+
+        </div>
+
+        <div
+            class="w-[1240px] h-[203px] mb-[56px] relative top-[72px] text-center m-auto flex items-center justify- gap-[33px]">
+            <div class="w-[127px] h-[203px] ">
+                <img class="w-[127px] h-[127px]" src="https://static.uzum.uz/Landing_Fashion_v2/1gotovobraz2313.jpg" alt="">
+                <a class="m-auto w-[74px] h-[44px] text-[18px]  font-[600] text-end"
+                    href="">Tayyor <br> obrozlar</a>
+            </div>
+
+            <div class="w-[127px] h-[203px] ">
+                <img class="w-[127px] h-[127px]" src="https://static.uzum.uz/Landing_Fashion_v2/2sport2313.jpg" alt="">
+                <a class="w-[74px] h-[44px] text-[18px]  font-[600] text-end"
+                    href="">Sport<br> Kiyimlari</a>
+            </div>
+
+            <div class="w-[127px] h-[203px] ">
+                <img class="w-[127px] h-[127px]" src="https://static.uzum.uz/Landing_Fashion_v2/3plat1488.jpg" alt="">
+                <a class="w-[74px] h-[44px] text-[18px] font-[600] text-end"
+                    href="">Ko'ylak va <br> yubkalar</a>
+            </div>
+
+            <div class="w-[127px] h-[203px] ">
+                <img class="w-[127px] h-[127px]" src="https://static.uzum.uz/Landing_Fashion_v2/4footb2314.jpg" alt="">
+                <a class="w-[74px] h-[44px] text-[18px]  font-[600] text-end"
+                    href="">futbolka va <br> pololar</a>
+            </div>
+
+            <div class="w-[127px] h-[203px] ">
+                <img class="w-[127px] h-[127px]" src="https://static.uzum.uz/Landing_Fashion_v2/5krosi2314.jpg" alt="">
+                <a class="w-[74px] h-[44px] text-[18px]  font-[600] text-end"
+                    href="">Krasovkalar</a>
+            </div>
+
+            <div class="w-[127px] h-[203px] ">
+                <img class="w-[127px] h-[127px]" src="https://static.uzum.uz/Landing_Fashion_v2/6bkdet20226.jpg" alt="">
+                <a class="w-[74px] h-[44px] text-[18px]  text-center"
+                    href="">Bolalar <br> kiyimlari</a>
+            </div>
+
+            <div class="w-[127px] h-[203px] ">
+                <img class="w-[127px] h-[127px]" src="https://static.uzum.uz/Landing_Fashion_v2/6chas1680.jpg" alt="">
+                <a class="w-[74px] h-[44px] text-[18px]  font-[600] text-end"
+                    href="">Bezaklar va <br>soatlar</a>
+            </div>
+
+            <div class="w-[127px] h-[203px] text-center">
+                <img class="w-[127px] h-[127px]" src="https://static.uzum.uz/Landing_Fashion_v2/7sumka1039.jpg" alt="">
+                <a class="w-[74px] h-[44px] text-[18px]  font-[600] text-end"
+                    href="">Sumklar</a>
+            </div>
+        </div>
+        <div class="w-[100%] h-[34px] mb-[64px] pt-[6px] pb-[6px] bg-[#fff59b] relative top-[100px] flex  ">
+
+            <marquee class="text-[18px] text-[#1f2026] gap-[50px] flex items-center" behavior="" direction="">
+                <div class="flex gap-[15px]">
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span></span>
+                    <span>Bepul kiyib ko'rish</span>
+                    <span> ● </span>
+                    <span>Muddatli to'lovga mumkin</span>
+                    <span> ● </span>
+                    <span>Bepul kiyib ko'rish</span>
+
+                </div>
+            </marquee>
+
+
+
+        </div>
+        <div class="w-[1240px] ml-[55px] mr-[55px]">
+
+            <div class="w-[1240px] h-[262px] mb-[64px] mt-[160px]">
+                <div class="w-[1240px] h-[36px] mb-[24px] cursor-pointer flex items-center relative top-[] text-start">
+                    <a class="w-[350px] h-[36px] text-[#1f2026] text-[28px] font-[700] flex items-center gap-[10px]">Bolaga
+                        g'amxorlik
+                        <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="more-icon relative left-[0px]"
+                                data-v-1ca3275e="">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M8.289 4.28899C8.67952 3.89846 9.31268 3.89846 9.70321 4.28899L16.7069 11.2927C16.8945 11.4802 16.9998 11.7346 16.9998 11.9998C16.9998 12.265 16.8945 12.5194 16.7069 12.7069L9.70271 19.7111C9.31219 20.1016 8.67902 20.1016 8.2885 19.7111C7.89797 19.3206 7.89797 18.6874 8.2885 18.2969L14.5856 11.9998L8.289 5.7032C7.89847 5.31268 7.89847 4.67951 8.289 4.28899Z"
+                                    fill="#1F2026"></path>
+                            </svg></span>
+                    </a>
+
+                </div>
+                <div class="w-[1240px] h-[202px] flex items-center gap-[20px]">
+                    <img class="w-[402px] h-[200px] rounded-[24px] cursor-pointer"
+                        src="https://static.uzum.uz/Landing_Fashion_v2/1det90126webuz.jpg" alt="">
+                    <img class="w-[402px] h-[200px] rounded-[24px] cursor-pointer"
+                        src="https://static.uzum.uz/Landing_Fashion_v2/2det90126webuz.jpg" alt="">
+                    <img class="w-[402px] h-[200px] rounded-[24px] cursor-pointer"
+                        src="https://static.uzum.uz/Landing_Fashion_v2/3det90126webuz.jpg" alt="">
+                </div>
+
+            </div>
+            <div class="w-[1240px] h-[160px] mb-[64px]">
+                <div class="w-[1240px] h-[36px] mb-[24px] cursor-pointer relative top-[] text-start">
+                    <a
+                        class="w-[350px] h-[36px] text-[#1f2026] text-[28px] font-[700] flex items-center gap-[10px] flex items-center">Bolalik
+                        dunyosi
+                        <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="more-icon relative left-[0px]"
+                                data-v-1ca3275e="">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M8.289 4.28899C8.67952 3.89846 9.31268 3.89846 9.70321 4.28899L16.7069 11.2927C16.8945 11.4802 16.9998 11.7346 16.9998 11.9998C16.9998 12.265 16.8945 12.5194 16.7069 12.7069L9.70271 19.7111C9.31219 20.1016 8.67902 20.1016 8.2885 19.7111C7.89797 19.3206 7.89797 18.6874 8.2885 18.2969L14.5856 11.9998L8.289 5.7032C7.89847 5.31268 7.89847 4.67951 8.289 4.28899Z"
+                                    fill="#1F2026"></path>
+                            </svg></span>
+                    </a>
+
+                    <div class="w-[1240px] h-[72px] ">
+                        <swiper-container class="w-[193px] h-[72px] mt-[25px]" navigation="true">
+                            <swiper-slide class="gap-[20px]">
+                                <span><img src="https://static.uzum.uz/Landing_Fashion_v2/1chicco.jpg" alt=""></span>
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/2lego.jpg" alt="">
+                                </span>
+
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/3lallaku.jpg" alt="">
+                                </span>
+
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/4huggies.jpg" alt="">
+                                </span>
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/5perla.jpg" alt="">
+                                </span>
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/votonya.jpg" alt="">
+                                </span>
+                            </swiper-slide>
+
+                            <swiper-slide class="gap-[20px]">
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/3lallaku.jpg" alt="">
+                                </span>
+
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/4huggies.jpg" alt="">
+                                </span>
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/5perla.jpg" alt="">
+                                </span>
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/votonya.jpg" alt="">
+                                </span>
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/oilatanlovi.jpg" alt="">
+                                </span>
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/6nestle.jpg" alt="">
+                                </span>
+                            </swiper-slide>
+                            <swiper-slide class="gap-[20px]">
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/5perla.jpg" alt="">
+                                </span>
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/votonya.jpg" alt="">
+                                </span>
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/oilatanlovi.jpg" alt="">
+                                </span>
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/6nestle.jpg" alt="">
+                                </span>
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/bonito.jpg" alt="">
+                                </span>
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/kabrita.jpg" alt="">
+                                </span>
+                            </swiper-slide>
+                            <swiper-slide class="gap-[20px]">
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/votonya.jpg" alt="">
+                                </span>
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/oilatanlovi.jpg" alt="">
+                                </span>
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/6nestle.jpg" alt="">
+                                </span>
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/bonito.jpg" alt="">
+                                </span>
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/kabrita.jpg" alt="">
+                                </span>
+
+
+                                <span>
+                                    <img src="https://static.uzum.uz/Landing_Fashion_v2/9anex.jpg" alt="">
+                                </span>
+                            </swiper-slide>
+                        </swiper-container>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div>
+                <div class="w-[1240px] h-[262px] mb-[64px] mt-[]">
+                    <div
+                        class="w-[1240px] h-[36px] mb-[24px] cursor-pointer flex items-center relative top-[] text-start">
+                        <a
+                            class="w-[350px] h-[36px] text-[#1f2026] text-[28px] font-[700] flex items-center gap-[10px]">Bolalik
+                            dunyosi
+                            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="more-icon relative left-[0px]"
+                                    data-v-1ca3275e="">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M8.289 4.28899C8.67952 3.89846 9.31268 3.89846 9.70321 4.28899L16.7069 11.2927C16.8945 11.4802 16.9998 11.7346 16.9998 11.9998C16.9998 12.265 16.8945 12.5194 16.7069 12.7069L9.70271 19.7111C9.31219 20.1016 8.67902 20.1016 8.2885 19.7111C7.89797 19.3206 7.89797 18.6874 8.2885 18.2969L14.5856 11.9998L8.289 5.7032C7.89847 5.31268 7.89847 4.67951 8.289 4.28899Z"
+                                        fill="#1F2026"></path>
+                                </svg></span>
+                        </a>
+
+                    </div>
+                    <div class="w-[1240px] h-[202px] flex items-center gap-[20px]">
+                        <img class="w-[402px] h-[200px] rounded-[24px] cursor-pointer"
+                            src="https://static.uzum.uz/Landing_Fashion_v2/4det90126webuz.jpg" alt="">
+                        <img class="w-[402px] h-[200px] rounded-[24px] cursor-pointer"
+                            src="https://static.uzum.uz/Landing_Fashion_v2/5det90126webuz.jpg" alt="">
+                        <img class="w-[402px] h-[200px] rounded-[24px] cursor-pointer"
+                            src="https://static.uzum.uz/Landing_Fashion_v2/6det90126webuz.jpg" alt="">
+                    </div>
+                </div>
+                <div class="w-[1240px] h-[413px]  mb-[64px]">
+                    <img class="rounded-[24px]" src="https://static.uzum.uz/Landing_Fashion_v2/modadet1604uz.jpg"
+                        alt="">
+                </div>
+
+                <div class="w-[1240px] h-[262px] mb-[64px] mt-[]">
+                    <div
+                        class="w-[1240px] h-[36px] mb-[24px] cursor-pointer flex items-center relative top-[] text-start">
+                        <a
+                            class="w-[350px] h-[36px] text-[#1f2026] text-[28px] font-[700] flex items-center gap-[10px]">Birga
+                            ulg'ayamiz
+                            <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="more-icon relative left-[0px]"
+                                    data-v-1ca3275e="">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M8.289 4.28899C8.67952 3.89846 9.31268 3.89846 9.70321 4.28899L16.7069 11.2927C16.8945 11.4802 16.9998 11.7346 16.9998 11.9998C16.9998 12.265 16.8945 12.5194 16.7069 12.7069L9.70271 19.7111C9.31219 20.1016 8.67902 20.1016 8.2885 19.7111C7.89797 19.3206 7.89797 18.6874 8.2885 18.2969L14.5856 11.9998L8.289 5.7032C7.89847 5.31268 7.89847 4.67951 8.289 4.28899Z"
+                                        fill="#1F2026"></path>
+                                </svg></span>
+                        </a>
+
+                    </div>
+                    <div class="w-[1240px] h-[202px] flex items-center gap-[20px]">
+                        <img class="w-[402px] h-[200px] rounded-[24px] cursor-pointer"
+                            src="https://static.uzum.uz/Landing_Fashion_v2/7det30226webuz.jpg" alt="">
+                        <img class="w-[402px] h-[200px] rounded-[24px] cursor-pointer"
+                            src="https://static.uzum.uz/Landing_Fashion_v2/8det30226webuz.jpg" alt="">
+                        <img class="w-[402px] h-[200px] rounded-[24px] cursor-pointer"
+                            src="https://static.uzum.uz/Landing_Fashion_v2/9det30226webuz.jpg" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="w-[1240px] h-[413px]  mb-[64px]">
+                <img class="rounded-[24px]" src="https://static.uzum.uz/Landing_Fashion_v2/5main901uz.jpg" alt="">
+            </div>
+
+            <div class="w-[1240px] h-[262px] mb-[64px] mt-[]">
+                <div class="w-[1240px] h-[36px] mb-[24px] cursor-pointer flex items-center relative top-[] text-start">
+                    <a class="w-[350px] h-[36px] text-[#1f2026] text-[28px] font-[700] flex items-center gap-[10px]">Xobbi
+                        va qiziqishlar
+                        <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="more-icon relative left-[0px]"
+                                data-v-1ca3275e="">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M8.289 4.28899C8.67952 3.89846 9.31268 3.89846 9.70321 4.28899L16.7069 11.2927C16.8945 11.4802 16.9998 11.7346 16.9998 11.9998C16.9998 12.265 16.8945 12.5194 16.7069 12.7069L9.70271 19.7111C9.31219 20.1016 8.67902 20.1016 8.2885 19.7111C7.89797 19.3206 7.89797 18.6874 8.2885 18.2969L14.5856 11.9998L8.289 5.7032C7.89847 5.31268 7.89847 4.67951 8.289 4.28899Z"
+                                    fill="#1F2026"></path>
+                            </svg></span>
+                    </a>
+
+                </div>
+                <div class="w-[1240px] h-[202px] flex items-center gap-[20px]">
+                    <img class="w-[612px] h-[202px] rounded-[24px] cursor-pointer"
+                        src="https://static.uzum.uz/Landing_Fashion_v2/10det90126webuz.jpg" alt="">
+                    <img class="w-[612px] h-[202px] rounded-[24px] cursor-pointer"
+                        src="https://static.uzum.uz/Landing_Fashion_v2/11det90126webuz.jpg" alt="">
+
+                </div>
+            </div>
+
+            <div class="w-[1240px] h-[262px] mb-[64px] mt-[]">
+                <div class="w-[1240px] h-[36px] mb-[24px] cursor-pointer flex items-center relative top-[] text-start">
+                    <a class="w-[350px] h-[36px] text-[#1f2026] text-[28px] font-[700] flex items-center gap-[10px]">Tozalik
+                        va sog'liq
+                        <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" class="more-icon relative left-[0px]"
+                                data-v-1ca3275e="">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M8.289 4.28899C8.67952 3.89846 9.31268 3.89846 9.70321 4.28899L16.7069 11.2927C16.8945 11.4802 16.9998 11.7346 16.9998 11.9998C16.9998 12.265 16.8945 12.5194 16.7069 12.7069L9.70271 19.7111C9.31219 20.1016 8.67902 20.1016 8.2885 19.7111C7.89797 19.3206 7.89797 18.6874 8.2885 18.2969L14.5856 11.9998L8.289 5.7032C7.89847 5.31268 7.89847 4.67951 8.289 4.28899Z"
+                                    fill="#1F2026"></path>
+                            </svg></span>
+                    </a>
+
+                </div>
+                <div class="w-[1240px] h-[202px] flex items-center gap-[20px]">
+                    <img class="w-[402px] h-[200px] rounded-[24px] cursor-pointer"
+                        src="https://static.uzum.uz/Landing_Fashion_v2/12det90126webuz.jpg" alt="">
+                    <img class="w-[402px] h-[200px] rounded-[24px] cursor-pointer"
+                        src="https://static.uzum.uz/Landing_Fashion_v2/13det90126webuz.jpg" alt="">
+                    <img class="w-[402px] h-[200px] rounded-[24px] cursor-pointer"
+                        src="https://static.uzum.uz/Landing_Fashion_v2/14det90126webuz.jpg" alt="">
+                </div>
+            </div>
+            <!-- <hr class="w-[1351px] m-auto"> -->
+         
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script>
+    <script>
+        function toggleDropdown() {
+            document.getElementById("dropdown").classList.toggle("hidden");
+        }
+
+        function selectLang(lang) {
+            document.getElementById("selectedLang").innerText = lang;
+            document.getElementById("dropdown").classList.add("hidden");
+        }
+        const btn = document.getElementById("topBtn");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 200) {
+                btn.classList.remove("hidden");
+            } else {
+                btn.classList.add("hidden");
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+    </script>
+</body>
+
+</html>
+
